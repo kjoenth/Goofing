@@ -1,0 +1,15 @@
+ActiveTextureManagement
+BioMass
+Chatterer
+Kas
+Kerbaltek
+Kethane
+Kis
+KSP-AVC
+MechJeb2
+RemoteTech(hyperedit)
+Squad
+ThunderAerospace
+TriggerTech
+ModuleManager
+HyperEdit

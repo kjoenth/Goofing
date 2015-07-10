@@ -1,15 +1,15 @@
-ship = Lander v7
+ship = Lander v9
 version = 1.0.2
 description = 
 type = VAB
-size = 11.2711,7.368481,12.47486
+size = 11.2711,7.368475,12.47486
 PART
 {
 	part = adapterSize2-Size1_4294243096
 	partName = Part
-	pos = 0,15,0
+	pos = 0.406121,9.108779,-0.5282891
 	attPos = 0,0,0
-	attPos0 = 0,15,0
+	attPos0 = 0.406121,9.108779,-0.5282891
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -31,6 +31,7 @@ PART
 	link = landingLeg1-2_4294181530
 	link = landingLeg1-2_4294180296
 	link = landingLeg1-2_4294180210
+	link = mumech.MJ2.AR202_4294666006
 	attN = bottom,liquidEngine3_4294206928
 	EVENTS
 	{
@@ -66,7 +67,7 @@ PART
 {
 	part = mk3CargoBayM_4294212894
 	partName = Part
-	pos = -2.791169,16.0281,-0.2015357
+	pos = -2.385048,10.13688,-0.7298248
 	attPos = -1.718668,1.719441,0
 	attPos0 = -1.072501,-0.6913385,-0.2015357
 	rot = -0.6806931,0.1914597,-0.6806933,-0.1914596
@@ -104,7 +105,7 @@ PART
 		status = Locked
 		animSwitch = True
 		animTime = 0
-		animSpeed = 1
+		animSpeed = -1
 		EVENTS
 		{
 			Toggle
@@ -144,7 +145,7 @@ PART
 {
 	part = mk3CargoBayM_4294212450
 	partName = Part
-	pos = 1.22105,16.0281,2.517991
+	pos = 1.627171,10.13688,1.989702
 	attPos = 0.8593341,1.719441,1.48841
 	attPos0 = 0.3617156,-0.6913385,1.029581
 	rot = -0.9298442,-0.07007907,0.249151,-0.2615387
@@ -182,7 +183,7 @@ PART
 		status = Locked
 		animSwitch = True
 		animTime = 0
-		animSpeed = 1
+		animSpeed = -1
 		EVENTS
 		{
 			Toggle
@@ -222,7 +223,7 @@ PART
 {
 	part = mk3CargoBayM_4294212264
 	partName = Part
-	pos = 1.570119,16.0281,-2.316455
+	pos = 1.97624,10.13688,-2.844744
 	attPos = 0.8593339,1.719441,-1.48841
 	attPos0 = 0.7107855,-0.6913385,-0.8280454
 	rot = -0.249151,-0.2615387,0.9298442,-0.07007911
@@ -243,8 +244,6 @@ PART
 	sym = mk3CargoBayM_4294212894
 	sym = mk3CargoBayM_4294212450
 	srfN = ,adapterSize2-Size1_4294243096
-	attN = top2,KAS.CPort1_4294491458
-	attN = bottom2,dockingPort2_4294169398
 	attN = bottom,HeatShield3_4294174184
 	EVENTS
 	{
@@ -262,7 +261,7 @@ PART
 		status = Locked
 		animSwitch = True
 		animTime = 0
-		animSpeed = 1
+		animSpeed = -1
 		EVENTS
 		{
 			Toggle
@@ -302,7 +301,7 @@ PART
 {
 	part = liquidEngine3_4294206928
 	partName = Part
-	pos = 0,13.47938,0
+	pos = 0.406121,7.588159,-0.5282891
 	attPos = 0,0,0
 	attPos0 = 0,-1.520622,0
 	rot = 0,0,0,1
@@ -500,7 +499,7 @@ PART
 {
 	part = landingLeg1-2_4294181530
 	partName = Part
-	pos = -0.4153072,15.16325,-0.9134009
+	pos = -0.009186149,9.272029,-1.44169
 	attPos = 0,0,0
 	attPos0 = -0.4153072,0.1632481,-0.9134009
 	rot = 0.03059125,0.9591551,0.1141682,-0.2570046
@@ -628,7 +627,7 @@ PART
 {
 	part = landingLeg1-2_4294180296
 	partName = Part
-	pos = -0.5833748,15.16325,0.8163671
+	pos = -0.1772538,9.272029,0.288078
 	attPos = 0,0,0
 	attPos0 = -0.5833748,0.1632481,0.8163671
 	rot = 0.1141682,0.257005,0.0305913,-0.959155
@@ -756,7 +755,7 @@ PART
 {
 	part = landingLeg1-2_4294180210
 	partName = Part
-	pos = 0.9986821,15.16325,0.09703387
+	pos = 1.404803,9.272029,-0.4312552
 	attPos = 0,0,0
 	attPos0 = 0.9986821,0.1632481,0.09703387
 	rot = 0.08357694,-0.7021501,-0.08357692,-0.7021503
@@ -884,7 +883,7 @@ PART
 {
 	part = HeatShield3_4294174184
 	partName = Part
-	pos = 0.85333,18.37488,-1.07494
+	pos = 1.259451,12.48366,-1.603229
 	attPos = 0,0,0
 	attPos0 = 1.788139E-07,-2.75,1.192093E-07
 	rot = 0.9626455,0.1353824,2.200786E-08,-0.2344892
@@ -977,7 +976,7 @@ PART
 {
 	part = HeatShield3_4294173814
 	partName = Part
-	pos = -1.35759,18.37488,-0.2015362
+	pos = -0.9514663,12.48366,-0.7298289
 	attPos = 0,0,0
 	attPos0 = -1.584113E-07,-2.75,2.384186E-07
 	rot = -0.4813229,0.1353824,0.8336754,0.2344892
@@ -994,10 +993,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294167888
+	link = dockingPort2_4294370792
 	sym = HeatShield3_4294174184
 	sym = HeatShield3_4294173748
-	attN = top,dockingPort2_4294167888
+	attN = top,dockingPort2_4294370792
 	EVENTS
 	{
 	}
@@ -1071,10 +1070,10 @@ PART
 {
 	part = HeatShield3_4294173748
 	partName = Part
-	pos = 0.5042605,18.37488,1.276476
+	pos = 0.9103798,12.48366,0.7481849
 	attPos = 0,0,0
 	attPos0 = 5.960464E-08,-2.75,2.384186E-07
-	rot = 0.4813228,0.2707648,0.8336756,-4.691402E-09
+	rot = 0.4813227,0.2707647,0.8336756,-1.778685E-08
 	attRot = 0.9999999,0,0,0
 	attRot0 = -7.45058E-09,-0.9659258,0,-0.258819
 	mir = 1,1,1
@@ -1088,7 +1087,6 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294169398
 	link = dockingPort2_4294167844
 	sym = HeatShield3_4294174184
 	sym = HeatShield3_4294173814
@@ -1164,14 +1162,531 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294169398
+	part = mumech.MJ2.AR202_4294666006
 	partName = Part
-	pos = 0.918492,18.16154,-1.187807
+	pos = 0.1313804,9.821109,-1.216687
 	attPos = 0,0,0
-	attPos0 = -2.255578,-0.822494,-0.7250237
-	rot = 0.9626456,0.1353825,-1.117587E-07,-0.2344892
-	attRot = 0.9999999,0,0,0
-	attRot0 = 0.22573,-0.7390426,0.3909758,0.5
+	attPos0 = -0.2747406,0.7123337,-0.6883975
+	rot = -0.05909783,0.4964954,0.1023604,-0.8599548
+	attRot = 0,0,0,1
+	attRot0 = -0.05909783,0.4964954,0.1023604,-0.8599548
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,adapterSize2-Size1_4294243096
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = MechJebCore
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnOrbitProgradeAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRetrogradeAction
+			{
+				actionGroup = None
+			}
+			OnOrbitNormalAction
+			{
+				actionGroup = None
+			}
+			OnOrbitAntinormalAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRadialInAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRadialOutAction
+			{
+				actionGroup = None
+			}
+			OnKillRotationAction
+			{
+				actionGroup = None
+			}
+			OnDeactivateSmartASSAction
+			{
+				actionGroup = None
+			}
+			OnPanicAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronOffAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronKeepVertAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronZeroSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronPlusOneSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronMinusOneSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronToggleHSAction
+			{
+				actionGroup = None
+			}
+		}
+		MechJebLocalSettings
+		{
+			MechJebModuleMenu
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = False
+				overrideSafeDistance = False
+				overrideTargetSize = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleAttitudeAdjustment
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = True
+				rcsAdjustment = True
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
+				{
+					_val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
+					_text = 0
+				}
+				limitChutesStage
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRCSBalancerWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleAscentPathEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleLandingPredictions
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleInfoItems
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSmartRcs
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleDebugArrows
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWarpHelper
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+				phaseAngle
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleSmartASS
+			{
+				mode = ORBITAL
+				target = OFF
+				advReference = INERTIAL
+				advDirection = FORWARD
+				forceRol = False
+				unlockParts = 
+				unlockTechs = flightControl
+				srfHdg
+				{
+					_val = 90
+					_text = 90
+				}
+				srfPit
+				{
+					_val = 90
+					_text = 90
+				}
+				srfRol
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelYaw
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelPit
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelRol
+				{
+					_val = 0
+					_text = 0
+				}
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleLandingGuidance
+			{
+				landingSiteIdx = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleRendezvousAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleTargetController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			ModExtensionDemo
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleDockingGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleTranslatron
+			{
+				trans_spd = 0
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleThrustWindow
+			{
+				autostageSavedState = False
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					_val = 0
+					_text = 0
+				}
+				speed
+				{
+					_val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleSettings
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSpaceplaneGuidance
+			{
+				runwayIndex = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleNodeExecutor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWaypointWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWaypointHelpWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleWarpController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleThrustController
+			{
+				limitThrottle = False
+				unlockParts = 
+				unlockTechs = 
+				maxThrottle
+				{
+					_val = 1
+					_text = 100
+				}
+			}
+			MechJebModuleSolarPanelController
+			{
+				prev_ShouldOpenSolarPanels = False
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRCSController
+			{
+				unlockParts = 
+				unlockTechs = 
+				Tf
+				{
+					_val = 1
+					_text = 1
+				}
+			}
+			MechJebModuleRCSBalancer
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAttitudeController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStagingController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleFlightRecorder
+			{
+				markUT = 0
+				deltaVExpended = 0
+				dragLosses = 0
+				gravityLosses = 0
+				steeringLosses = 0
+				markLatitude = 0
+				markLongitude = 0
+				markAltitude = 0
+				markBodyIndex = 1
+				maxDragGees = 0
+				unlockParts = 
+				unlockTechs = 
+			}
+		}
+	}
+	MODULE
+	{
+		name = MechJebAR202
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 5
+		maxAmount = 5
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = dockingPort2_4294167844
+	partName = Part
+	pos = 1.070155,12.37056,1.101718
+	attPos = 0.168498,0.04776475,0.2150544
+	attPos0 = 7.210429E-08,0.2499995,1.211009E-07
+	rot = 0.9351298,0.07584925,-0.2285146,0.259924
+	attRot = 0.2696655,0.2630253,-0.9241033,0.06427459
+	attRot0 = -1.490116E-08,-0.8660254,0,0.4999999
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 2
@@ -1183,10 +1698,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294166104
-	sym = dockingPort2_4294167888
-	sym = dockingPort2_4294167844
-	attN = top,dockingPort2_4294166104
+	link = dockingPort2_4294174782
+	attN = top,dockingPort2_4294174782
 	attN = bottom,HeatShield3_4294173748
 	EVENTS
 	{
@@ -1310,14 +1823,14 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294167888
+	part = dockingPort2_4294370792
 	partName = Part
-	pos = -1.487915,18.16154,-0.2015363
-	attPos = 0,0,0
-	attPos0 = 7.047393E-08,0.2499993,-1.722558E-07
-	rot = 0.4813226,-0.1353824,-0.8336757,-0.2344892
+	pos = -1.081794,12.44094,-0.7298287
+	attPos = 0.04447273,-0.1456041,0.07702894
+	attPos0 = 7.667615E-08,0.2499995,-1.67745E-07
+	rot = 0.9626455,-0.2707648,-5.237691E-07,-8.64918E-08
 	attRot = 0.9999999,0,0,0
-	attRot0 = -7.450579E-09,1.788139E-07,-1.043081E-07,-1
+	attRot0 = 7.45058E-08,-0.8660253,2.980232E-08,-0.5000001
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 2
@@ -1329,8 +1842,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = dockingPort2_4294169398
-	sym = dockingPort2_4294167844
+	link = dockingPort2_4294407272
+	attN = top,dockingPort2_4294407272
 	attN = bottom,HeatShield3_4294173814
 	EVENTS
 	{
@@ -1454,162 +1967,16 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294167844
+	part = dockingPort2_4294407272
 	partName = Part
-	pos = 0.5694228,18.16154,1.38934
+	pos = -1.376728,11.95813,-0.7298286
 	attPos = 0,0,0
-	attPos0 = -7.782312E-08,0.249999,-2.278098E-08
-	rot = 0.4813227,0.2707648,0.8336756,6.763513E-08
-	attRot = 0.9999999,0,0,0
-	attRot0 = -2.980232E-08,0,-5.960464E-08,1
+	attPos0 = -5.041462E-07,0.5657649,9.186911E-08
+	rot = -0.1914595,-0.6806931,-0.1914597,0.6806931
+	attRot = 0,-0.7071068,0,0.7071068
+	attRot0 = -0.7071066,-1.490116E-08,0.707107,-1.627722E-08
 	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294145946
-	sym = dockingPort2_4294169398
-	sym = dockingPort2_4294167888
-	attN = top,dockingPort2_4294145946
-	attN = bottom,HeatShield3_4294173748
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-			Undock
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = False
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MakeReferenceTransform
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = dockingPort2_4294166104
-	partName = Part
-	pos = 1.065959,17.67873,-1.443229
-	attPos = 0,0,0
-	attPos0 = -2.533197E-07,0.5657665,1.087785E-06
-	rot = 0.06461894,-0.9244556,-0.262941,-0.2684558
-	attRot = 0.9244556,0.06461884,-0.2684556,0.262941
-	attRot0 = 7.311424E-09,-2.980232E-08,-1,8.735402E-10
-	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	istg = 2
 	dstg = 2
 	sidx = -1
@@ -1619,9 +1986,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = trussPiece1x_4294166064
-	attN = top,dockingPort2_4294169398
-	attN = bottom,trussPiece1x_4294166064
+	link = trussPiece1x_4294407232
+	attN = top,dockingPort2_4294370792
+	attN = bottom,trussPiece1x_4294407232
 	EVENTS
 	{
 	}
@@ -1744,12 +2111,12 @@ PART
 }
 PART
 {
-	part = trussPiece1x_4294166064
+	part = trussPiece1x_4294407232
 	partName = Part
-	pos = 1.211733,17.20146,-1.695719
+	pos = -1.668278,11.48086,-0.7298282
 	attPos = 0,0,0
 	attPos0 = 0.008496612,-0.07264744,0.3245687
-	rot = 0.06461892,-0.9244556,-0.2629412,-0.2684556
+	rot = -0.1914598,-0.6806931,-0.1914598,0.6806931
 	attRot = 0.7071068,0,0,0.7071068
 	attRot0 = 1,0,0,1.788139E-07
 	mir = 1,1,1
@@ -1763,11 +2130,11 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = wheelMed_4294166042
-	link = wheelMed_4294165918
-	link = trussPiece1x_4294165794
-	srfN = srfAttach,trussPiece1x_4294165794
-	attN = top,dockingPort2_4294166104
+	link = wheelMed_4294407210
+	link = wheelMed_4294407086
+	link = trussPiece1x_4294406962
+	srfN = srfAttach,trussPiece1x_4294406962
+	attN = top,dockingPort2_4294407272
 	EVENTS
 	{
 	}
@@ -1780,12 +2147,12 @@ PART
 }
 PART
 {
-	part = wheelMed_4294166042
+	part = wheelMed_4294407210
 	partName = Part
-	pos = 0.7689276,17.30791,-1.595737
+	pos = -1.348593,11.58017,-0.4052598
 	attPos = 0,0,0
 	attPos0 = 0.3245691,0.2513995,-0.2210455
-	rot = 0.4677613,0.2355192,0.1441345,-0.8396163
+	rot = 0.3459402,-0.6167052,-0.3459402,-0.6167054
 	attRot = 0.7071067,0,0,-0.7071067
 	attRot0 = 0,-0.7071069,-0.7071068,0
 	mir = 1,1,1
@@ -1799,8 +2166,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294165918
-	srfN = srfAttach,trussPiece1x_4294166064
+	sym = wheelMed_4294407086
+	srfN = srfAttach,trussPiece1x_4294407232
 	EVENTS
 	{
 	}
@@ -1943,12 +2310,12 @@ PART
 }
 PART
 {
-	part = wheelMed_4294165918
+	part = wheelMed_4294407086
 	partName = Part
-	pos = 1.31908,17.29383,-1.25148
+	pos = -1.348592,11.58017,-1.054397
 	attPos = 0,0,0
 	attPos0 = -0.324569,0.2513995,-0.2210455
-	rot = -0.1441343,-0.8396164,0.4677613,-0.2355191
+	rot = 0.3459402,-0.6167052,0.3459401,0.6167054
 	attRot = 0.7071067,0,0,-0.7071067
 	attRot0 = 0.7071068,3.090862E-08,3.090862E-08,0.7071069
 	mir = 1,1,1
@@ -1962,8 +2329,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294166042
-	srfN = srfAttach,trussPiece1x_4294166064
+	sym = wheelMed_4294407210
+	srfN = srfAttach,trussPiece1x_4294407232
 	EVENTS
 	{
 	}
@@ -2106,12 +2473,12 @@ PART
 }
 PART
 {
-	part = trussPiece1x_4294165794
+	part = trussPiece1x_4294406962
 	partName = Part
-	pos = 1.387941,17.30833,-1.956918
+	pos = -1.983128,11.58807,-0.7383249
 	attPos = 0,0,0
 	attPos0 = 0,2.034512,-4.593771E-07
-	rot = 0.2684556,0.262941,-0.9244557,0.06461884
+	rot = -0.6806932,0.1914595,-0.6806932,-0.1914594
 	attRot = 0,0,0,1
 	attRot0 = 0,2.086162E-07,1,0
 	mir = 1,1,1
@@ -2125,10 +2492,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = largeSolarPanel_4294165772
-	link = largeSolarPanel_4294165706
-	link = trussPiece3x_4294165640
-	attN = top,trussPiece3x_4294165640
+	link = largeSolarPanel_4294406940
+	link = largeSolarPanel_4294406874
+	link = trussPiece3x_4294406808
+	attN = top,trussPiece3x_4294406808
 	EVENTS
 	{
 	}
@@ -2141,12 +2508,12 @@ PART
 }
 PART
 {
-	part = largeSolarPanel_4294165772
+	part = largeSolarPanel_4294406940
 	partName = Part
-	pos = 1.191148,16.89448,-2.264314
+	pos = -2.139478,11.16721,-0.4174999
 	attPos = 0,0,0
 	attPos0 = 0.3208248,0.4406555,0.08596505
-	rot = 0.9515874,0.09838669,0.1454933,-0.2522569
+	rot = 0.5860215,-0.1648311,-0.7637181,-0.2148121
 	attRot = 0,0,0,1
 	attRot0 = 3.72529E-08,0.9914448,1.192093E-07,0.1305262
 	mir = 1,1,1
@@ -2160,8 +2527,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = largeSolarPanel_4294165706
-	srfN = srfAttach,trussPiece1x_4294165794
+	sym = largeSolarPanel_4294406874
+	srfN = srfAttach,trussPiece1x_4294406962
 	EVENTS
 	{
 	}
@@ -2223,12 +2590,12 @@ PART
 }
 PART
 {
-	part = largeSolarPanel_4294165706
+	part = largeSolarPanel_4294406874
 	partName = Part
-	pos = 1.734954,16.88055,-1.924027
+	pos = -2.139478,11.16721,-1.05915
 	attPos = 0,0,0
 	attPos0 = -0.3208248,0.4406555,0.08596505
-	rot = -0.3868248,-0.2691257,0.8815062,-0.02974528
+	rot = 0.5860215,-0.164831,0.7637181,0.2148121
 	attRot = 0,0,0,1
 	attRot0 = -2.086162E-07,-0.1305262,-2.980232E-08,-0.9914448
 	mir = 1,1,1
@@ -2242,8 +2609,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = largeSolarPanel_4294165772
-	srfN = srfAttach,trussPiece1x_4294165794
+	sym = largeSolarPanel_4294406940
+	srfN = srfAttach,trussPiece1x_4294406962
 	EVENTS
 	{
 	}
@@ -2305,12 +2672,12 @@ PART
 }
 PART
 {
-	part = trussPiece3x_4294165640
+	part = trussPiece3x_4294406808
 	partName = Part
-	pos = 1.918236,15.57213,-2.875421
+	pos = -3.04372,9.851869,-0.7383243
 	attPos = 0,0,0
 	attPos0 = -0.008892819,-1.229265,-0.3245686
-	rot = -0.2629412,0.2684558,-0.06461897,-0.9244555
+	rot = -0.1914598,-0.6806933,0.1914598,-0.6806931
 	attRot = 0.7071068,0,0,0.7071068
 	attRot0 = 0,-1.788139E-07,-1,0
 	mir = 1,1,1
@@ -2324,13 +2691,12 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = largeSolarPanel_4294165618
-	link = largeSolarPanel_4294165552
-	link = trussPiece1x_4294165486
-	link = ksp.r.largeBatteryPack_4294516638
-	link = KAS.CPort1_4294493248
-	srfN = srfAttach,trussPiece1x_4294165486
-	attN = top,trussPiece1x_4294165794
+	link = largeSolarPanel_4294406786
+	link = largeSolarPanel_4294406720
+	link = ksp.r.largeBatteryPack_4294406654
+	link = trussPiece1x_4294406630
+	srfN = srfAttach,trussPiece1x_4294406630
+	attN = top,trussPiece1x_4294406962
 	EVENTS
 	{
 	}
@@ -2343,12 +2709,12 @@ PART
 }
 PART
 {
-	part = largeSolarPanel_4294165618
+	part = largeSolarPanel_4294406786
 	partName = Part
-	pos = 1.822004,14.98746,-3.361802
+	pos = -3.405212,9.260105,-0.4115081
 	attPos = 0,0,0
 	attPos0 = -0.3268149,-0.6934396,1.172541E-07
-	rot = 0.2629415,-0.2684556,0.06461892,0.9244555
+	rot = 0.1914598,0.6806933,-0.1914599,0.6806931
 	attRot = 0,0,0,1
 	attRot0 = -1.192093E-07,0,0,-1
 	mir = 1,1,1
@@ -2362,8 +2728,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = largeSolarPanel_4294165552
-	srfN = srfAttach,trussPiece3x_4294165640
+	sym = largeSolarPanel_4294406720
+	srfN = srfAttach,trussPiece3x_4294406808
 	EVENTS
 	{
 	}
@@ -2425,12 +2791,12 @@ PART
 }
 PART
 {
-	part = largeSolarPanel_4294165552
+	part = largeSolarPanel_4294406720
 	partName = Part
-	pos = 2.375964,14.97328,-3.015162
+	pos = -3.40521,9.260103,-1.06514
 	attPos = 0,0,0
 	attPos0 = 0.3268149,-0.6934396,1.172541E-07
-	rot = -0.06461903,0.9244556,0.2629414,0.2684555
+	rot = 0.19146,0.680693,0.19146,-0.6806933
 	attRot = 0,0,0,1
 	attRot0 = 0,-1,-2.682209E-07,4.371139E-08
 	mir = 1,1,1
@@ -2444,8 +2810,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = largeSolarPanel_4294165618
-	srfN = srfAttach,trussPiece3x_4294165640
+	sym = largeSolarPanel_4294406786
+	srfN = srfAttach,trussPiece3x_4294406808
 	EVENTS
 	{
 	}
@@ -2507,12 +2873,54 @@ PART
 }
 PART
 {
-	part = trussPiece1x_4294165486
+	part = ksp.r.largeBatteryPack_4294406654
 	partName = Part
-	pos = 2.081039,14.35425,-3.202193
+	pos = -2.54688,10.04141,-0.7383249
 	attPos = 0,0,0
+	attPos0 = 0,0.4207551,0.3251753
+	rot = 0.19146,0.680693,0.19146,-0.680693
+	attRot = 0,0,0,1
+	attRot0 = 0,-1,-2.086162E-07,0
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,trussPiece3x_4294406808
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 400
+		maxAmount = 400
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = trussPiece1x_4294406630
+	partName = Part
+	pos = -3.280806,8.81174,-0.7294314
+	attPos = -0.008892857,-0.3908735,0.3398966
 	attPos0 = 0,-0.6203349,7.394968E-08
-	rot = 0.2684554,0.2629411,-0.9244557,0.06461888
+	rot = -0.6806931,0.1914596,-0.6806931,-0.1914597
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -2526,11 +2934,11 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = wheelMed_4294165464
-	link = wheelMed_4294165340
-	link = probeCoreOcto2_4294165216
-	link = KAS.CPort1_4294491458
-	attN = bottom,probeCoreOcto2_4294165216
+	link = wheelMed_4294406608
+	link = wheelMed_4294406484
+	link = SmallGearBay_4294406360
+	link = probeCoreOcto2_4294406180
+	attN = bottom,probeCoreOcto2_4294406180
 	EVENTS
 	{
 	}
@@ -2543,12 +2951,12 @@ PART
 }
 PART
 {
-	part = wheelMed_4294165464
+	part = wheelMed_4294406608
 	partName = Part
-	pos = 1.753676,13.97818,-3.306441
+	pos = -3.195675,8.428502,-0.4048628
 	attPos = 0,0,0
 	attPos0 = 0.324569,0.2826644,0.2724295
-	rot = 0.4677615,0.2355192,0.1441347,-0.8396162
+	rot = 0.3459405,-0.6167049,-0.3459405,-0.6167052
 	attRot = 0.7071068,0,0,0.7071068
 	attRot0 = -4.214685E-08,0.7071068,-0.7071068,0
 	mir = 1,1,1
@@ -2562,8 +2970,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294165340
-	srfN = srfAttach,trussPiece1x_4294165486
+	sym = wheelMed_4294406484
+	srfN = srfAttach,trussPiece1x_4294406630
 	EVENTS
 	{
 	}
@@ -2706,12 +3114,12 @@ PART
 }
 PART
 {
-	part = wheelMed_4294165340
+	part = wheelMed_4294406484
 	partName = Part
-	pos = 2.303828,13.9641,-2.962184
+	pos = -3.195674,8.428503,-1.054001
 	attPos = 0,0,0
 	attPos0 = -0.324569,0.2826645,0.2724295
-	rot = -0.1441345,-0.8396162,0.4677614,-0.2355192
+	rot = 0.3459404,-0.616705,0.3459405,0.6167052
 	attRot = 0.7071068,0,0,0.7071068
 	attRot0 = 0.7071068,-3.090862E-08,7.305546E-08,-0.7071068
 	mir = 1,1,1
@@ -2725,8 +3133,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294165464
-	srfN = srfAttach,trussPiece1x_4294165486
+	sym = wheelMed_4294406608
+	srfN = srfAttach,trussPiece1x_4294406630
 	EVENTS
 	{
 	}
@@ -2869,12 +3277,297 @@ PART
 }
 PART
 {
-	part = probeCoreOcto2_4294165216
+	part = SmallGearBay_4294406360
 	partName = Part
-	pos = 1.919348,14.88363,-2.922138
+	pos = -3.673673,8.282393,-0.7052798
+	attPos = 0,0,0
+	attPos0 = 0.02415138,0.6565344,-0.05931386
+	rot = -0.03959213,-0.7059973,0.03959226,-0.7059976
+	attRot = 0,0.9762959,0.2164396,0
+	attRot0 = 0,0.2164396,-0.976296,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,trussPiece1x_4294406630
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGear
+		isEnabled = True
+		BrakeTorque = 12
+		brakesEngaged = False
+		brakesEnabled = True
+		storedGearState = UNDEFINED
+		storedAnimationSpeed = 0
+		storedAnimationTime = 0
+		StartDeployed = True
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LowerLandingGear
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Gear
+				guiName = Lower Gear
+				category = Lower Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RaiseLandingGear
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Gear
+				guiName = Raise Gear
+				category = Raise Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = True
+		invertSteering = False
+		EVENTS
+		{
+			UnLockSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Unlock Steering
+				guiName = Unlock Steering
+				category = Unlock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LockSteering
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Steering
+				guiName = Lock Steering
+				category = Lock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			InvertSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Invert Steering
+				guiName = Invert Steering
+				category = Invert Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InvertSteeringAction
+			{
+				actionGroup = None
+			}
+			LockSteeringAction
+			{
+				actionGroup = None
+			}
+			UnlockSteeringAction
+			{
+				actionGroup = None
+			}
+			ToggleSteeringAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FXModuleConstrainPosition
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = probeCoreOcto2_4294406180
+	partName = Part
+	pos = -2.957424,9.34112,-0.7294316
 	attPos = 0,0,0
 	attPos0 = 0.1277924,10.80568,-1.082793
-	rot = 0.2684556,0.2629411,-0.9244556,0.06461882
+	rot = -0.6806934,0.1914596,-0.680693,-0.1914597
 	attRot = 0,0,0,1
 	attRot0 = 0.7071068,0,0,0.7071068
 	mir = 1,1,1
@@ -2888,7 +3581,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	attN = top,trussPiece1x_4294165486
+	attN = top,trussPiece1x_4294406630
 	EVENTS
 	{
 	}
@@ -2976,16 +3669,16 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294145946
+	part = dockingPort2_4294174782
 	partName = Part
-	pos = 0.7168896,17.67873,1.64476
+	pos = 1.217622,11.88775,1.357138
 	attPos = 0,0,0
-	attPos0 = -9.309631E-08,0.5657659,-8.659914E-08
-	rot = -0.06490704,0.9247494,-0.2628701,-0.2674418
-	attRot = -0.2307633,-0.2601056,-0.9345773,0.07522383
-	attRot0 = 0.8660254,7.45058E-09,-0.4999999,4.470348E-08
+	attPos0 = -2.438E-09,0.5657659,-2.228089E-07
+	rot = -0.2611324,0.2438133,0.07157821,0.9312581
+	attRot = 0.9625162,-0.007544144,0.01578045,0.2706597
+	attRot0 = -0.9714164,0,0.2373818,7.078051E-08
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	istg = 2
 	dstg = 2
 	sidx = -1
@@ -2995,9 +3688,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = batteryBank_4294145906
+	link = batteryBank_4294174742
+	srfN = srfAttach,dockingPort2_4294167844
 	attN = top,dockingPort2_4294167844
-	attN = bottom,batteryBank_4294145906
+	attN = bottom,batteryBank_4294174742
 	EVENTS
 	{
 	}
@@ -3120,14 +3814,14 @@ PART
 }
 PART
 {
-	part = batteryBank_4294145906
+	part = batteryBank_4294174742
 	partName = Part
-	pos = 0.745784,17.58413,1.694807
+	pos = 1.246516,11.79315,1.407185
 	attPos = 0,0,0
-	attPos0 = 0,-0.1108553,1.321498E-08
-	rot = -0.06490707,0.9247494,-0.26287,-0.2674419
+	attPos0 = 0,-0.1108553,-1.321498E-08
+	rot = -0.9312581,-0.07157822,0.2438133,-0.2611324
 	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attRot0 = -1,0,0,0
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 2
@@ -3139,9 +3833,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = mk2Cockpit.Inline_4294145878
-	attN = top,dockingPort2_4294145946
-	attN = bottom,mk2Cockpit.Inline_4294145878
+	link = mk2Cockpit.Inline_4294174714
+	attN = top,mk2Cockpit.Inline_4294174714
+	attN = bottom,dockingPort2_4294174782
 	EVENTS
 	{
 	}
@@ -3164,14 +3858,14 @@ PART
 }
 PART
 {
-	part = mk2Cockpit.Inline_4294145878
+	part = mk2Cockpit.Inline_4294174714
 	partName = Part
-	pos = 1.100492,16.42281,2.309179
+	pos = 1.601224,10.63183,2.021556
 	attPos = 0,0,0
-	attPos0 = 0,-1.360855,1.622266E-07
-	rot = -0.06490707,0.9247494,-0.2628701,-0.2674418
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attPos0 = 0,1.360855,1.622266E-07
+	rot = 0.07157822,-0.9312581,0.2611324,0.2438133
+	attRot = 0,0,-0.9999999,0
+	attRot0 = 0,0,-1,0
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 2
@@ -3183,15 +3877,17 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = trussPiece1x_4294145772
-	link = trussPiece1x_4294145502
-	link = dockingPort2_4294145232
-	link = SmallGearBay_4294145192
-	link = SmallGearBay_4294145012
-	link = KAS.CPort1_4294489604
-	link = KAS.CPort1_4294488488
-	attN = top,batteryBank_4294145906
-	attN = bottom,dockingPort2_4294145232
+	link = trussPiece1x_4294174608
+	link = trussPiece1x_4294174338
+	link = dockingPort2_4294174068
+	link = KAS.CPort1_4294174028
+	link = KAS.Winch2_4294173998
+	link = KAS.Winch2_4294173924
+	link = KAS.CPort1_4294173850
+	link = SmallGearBay_4294173820
+	link = SmallGearBay_4294173640
+	attN = top,batteryBank_4294174742
+	attN = bottom,dockingPort2_4294174068
 	EVENTS
 	{
 	}
@@ -3661,12 +4357,12 @@ PART
 }
 PART
 {
-	part = trussPiece1x_4294145772
+	part = trussPiece1x_4294174608
 	partName = Part
-	pos = 0.5858024,16.62479,1.475379
+	pos = 1.118548,10.83354,1.168763
 	attPos = 0,0,0
 	attPos0 = 0,0.6829461,0.7310963
-	rot = -0.2674419,-0.2628699,-0.9247494,0.06490701
+	rot = 0.2438133,0.2611322,0.9312583,-0.07157816
 	attRot = 0.7071068,0,0,0.7071068
 	attRot0 = 1,0,0,1.788139E-07
 	mir = 1,1,1
@@ -3680,9 +4376,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = wheelMed_4294145750
-	link = wheelMed_4294145626
-	srfN = srfAttach,mk2Cockpit.Inline_4294145878
+	link = wheelMed_4294174586
+	link = wheelMed_4294174462
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
 	EVENTS
 	{
 	}
@@ -3695,14 +4391,14 @@ PART
 }
 PART
 {
-	part = wheelMed_4294145750
+	part = wheelMed_4294174586
 	partName = Part
-	pos = 0.6499041,16.7012,0.9614407
-	attPos = 0,0,0
-	attPos0 = -0.324569,-0.28052,-0.3000652
-	rot = -0.1432137,-0.8397737,-0.4680196,0.2350062
-	attRot = 0.7071067,0,0,0.7071067
-	attRot0 = 0.7071068,-1.065814E-14,4.214684E-08,0.7071068
+	pos = 0.7206676,10.99534,1.126111
+	attPos = 0,1.311302E-06,0.07705875
+	attPos0 = 0.324569,-0.2610337,-0.1902915
+	rot = 0.4738507,0.2230154,-0.1217886,0.8431473
+	attRot = 0.7071067,0,0,-0.7071067
+	attRot0 = 0,-0.7071069,-0.7071068,0
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 2
@@ -3714,8 +4410,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294145626
-	srfN = srfAttach,trussPiece1x_4294145772
+	sym = wheelMed_4294174462
+	srfN = srfAttach,trussPiece1x_4294174608
 	EVENTS
 	{
 	}
@@ -3858,14 +4554,14 @@ PART
 }
 PART
 {
-	part = wheelMed_4294145626
+	part = wheelMed_4294174462
 	partName = Part
-	pos = 0.09909487,16.71455,1.304677
-	attPos = 0,0,0
-	attPos0 = 0.3245691,-0.2805199,-0.3000652
-	rot = -0.4680196,-0.2350062,0.1432137,-0.8397738
-	attRot = 0.7071067,0,0,0.7071067
-	attRot0 = -1.123822E-08,-0.7071068,-0.7071068,3.090863E-08
+	pos = 1.285978,10.99922,0.8070667
+	attPos = -2.980232E-08,1.072884E-06,0.07705875
+	attPos0 = -0.324569,-0.2610337,-0.1902915
+	rot = 0.1217886,0.8431473,0.4738507,-0.2230155
+	attRot = 0.7071067,0,0,-0.7071067
+	attRot0 = 0.7071068,3.090862E-08,3.090862E-08,0.7071069
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 2
@@ -3877,8 +4573,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294145750
-	srfN = srfAttach,trussPiece1x_4294145772
+	sym = wheelMed_4294174586
+	srfN = srfAttach,trussPiece1x_4294174608
 	EVENTS
 	{
 	}
@@ -4021,12 +4717,12 @@ PART
 }
 PART
 {
-	part = trussPiece1x_4294145502
+	part = trussPiece1x_4294174338
 	partName = Part
-	pos = 0.9415566,15.46224,2.091478
+	pos = 1.474256,9.670993,1.784891
 	attPos = 0,0,0
 	attPos0 = 0,-0.6800156,0.730014
-	rot = 0.06490701,-0.9247495,0.2628699,0.2674419
+	rot = -0.07157816,0.9312583,-0.2611322,-0.2438133
 	attRot = 0.7071067,0,0,-0.7071067
 	attRot0 = 1.788139E-07,0,0,-1
 	mir = 1,1,1
@@ -4040,9 +4736,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = wheelMed_4294145480
-	link = wheelMed_4294145356
-	srfN = srfAttach,mk2Cockpit.Inline_4294145878
+	link = wheelMed_4294174316
+	link = wheelMed_4294174192
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
 	EVENTS
 	{
 	}
@@ -4055,14 +4751,14 @@ PART
 }
 PART
 {
-	part = wheelMed_4294145480
+	part = wheelMed_4294174316
 	partName = Part
-	pos = 1.138016,15.12795,1.805911
-	attPos = 0,0,0
-	attPos0 = -0.324569,-0.2075594,0.2889053
-	rot = 0.1432137,0.8397737,0.4680195,-0.2350062
-	attRot = -0.7071067,0,0,0.7071067
-	attRot0 = 0.7071067,4.214684E-08,1.065814E-14,-0.7071069
+	pos = 1.238756,9.38122,2.024465
+	attPos = 0,-2.384186E-07,-0.08862216
+	attPos0 = 0.324569,-0.2940599,0.1593905
+	rot = 0.4738505,0.2230155,-0.1217886,0.8431474
+	attRot = -0.7071067,0,0,-0.7071067
+	attRot0 = -7.105427E-15,0.7071069,-0.7071067,-4.214684E-08
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 2
@@ -4074,8 +4770,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294145356
-	srfN = srfAttach,trussPiece1x_4294145502
+	sym = wheelMed_4294174192
+	srfN = srfAttach,trussPiece1x_4294174338
 	EVENTS
 	{
 	}
@@ -4218,14 +4914,14 @@ PART
 }
 PART
 {
-	part = wheelMed_4294145356
+	part = wheelMed_4294174192
 	partName = Part
-	pos = 0.5872064,15.14129,2.149147
-	attPos = 0,0,0
-	attPos0 = 0.3245691,-0.2075594,0.2889053
-	rot = -0.4680196,-0.2350062,0.1432137,-0.8397738
-	attRot = -0.7071067,0,0,0.7071067
-	attRot0 = -3.09086E-08,-0.7071069,0.7071067,7.305546E-08
+	pos = 1.804067,9.385101,1.705421
+	attPos = -2.980232E-08,0,-0.08862216
+	attPos0 = -0.324569,-0.2940599,0.1593905
+	rot = 0.1217885,0.8431474,0.4738505,-0.2230154
+	attRot = -0.7071067,0,0,-0.7071067
+	attRot0 = -0.7071067,-1.123821E-08,-3.090862E-08,0.7071069
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 2
@@ -4237,8 +4933,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294145480
-	srfN = srfAttach,trussPiece1x_4294145502
+	sym = wheelMed_4294174316
+	srfN = srfAttach,trussPiece1x_4294174338
 	EVENTS
 	{
 	}
@@ -4381,16 +5077,16 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294145232
+	part = dockingPort2_4294174068
 	partName = Part
-	pos = 1.426305,15.35609,2.873506
+	pos = 1.927037,9.565117,2.58588
 	attPos = 0,0,0
-	attPos0 = 0,-1.250001,1.490117E-07
-	rot = -0.2674419,-0.26287,-0.9247494,0.06490707
-	attRot = 0.9999999,0,0,0
-	attRot0 = 1,0,0,0
+	attPos0 = 0,-1.25,1.490116E-07
+	rot = -0.9312581,-0.07157822,0.2438133,-0.2611324
+	attRot = 0,0,0,1
+	attRot0 = 0,0,1,0
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	istg = 2
 	dstg = 2
 	sidx = -1
@@ -4400,7 +5096,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	attN = bottom,mk2Cockpit.Inline_4294145878
+	attN = bottom,mk2Cockpit.Inline_4294174714
 	EVENTS
 	{
 	}
@@ -4523,15 +5219,1011 @@ PART
 }
 PART
 {
-	part = SmallGearBay_4294145192
+	part = KAS.CPort1_4294174028
 	partName = Part
-	pos = 1.642291,14.96472,2.416027
+	pos = 1.973259,11.73622,1.036937
 	attPos = 0,0,0
-	attPos0 = -0.4332107,-1.433749,0.4332106
-	rot = -0.06490707,0.9247494,-0.26287,-0.2674418
+	attPos0 = -0.8145247,1.290001,0.002557601
+	rot = -0.2611324,0.2438133,0.07157821,0.9312581
+	attRot = 0,0,0,1
+	attRot0 = 0,1,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModuleStrut
+		isEnabled = True
+		pumpFuel = False
+		tgtStrutPartID = 
+		tgtStrutVesselID = 
+		EVENTS
+		{
+			ContextMenuTogglePump
+			{
+				active = False
+				guiActive = True
+				guiIcon = Pump Here
+				guiName = Pump Here
+				category = Pump Here
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Link
+				guiName = Link
+				category = Link
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnlink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unlink
+				guiName = Unlink
+				category = Unlink
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KAS.Winch2_4294173998
+	partName = Part
+	pos = 0.5389761,11.7007,1.886476
+	attPos = 0,0,0
+	attPos0 = 0.852291,1.250001,-0.01390282
+	rot = -0.9312581,-0.07157822,0.2438133,-0.2611324
+	attRot = 0,-0.7071067,-0.7071067,0
+	attRot0 = 0,0,1,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KAS.Hook.Magnet_4294173954
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
+	attN = bottom,KAS.Hook.Magnet_4294173954
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModuleWinch
+		isEnabled = True
+		winchName = 
+		controlActivated = True
+		controlInverted = False
+		EVENTS
+		{
+			ContextMenuToggleControl
+			{
+				active = True
+				guiActive = True
+				guiIcon = Winch: Toggle Control
+				guiName = Winch: Toggle Control
+				category = Winch: Toggle Control
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuInvertControl
+			{
+				active = True
+				guiActive = True
+				guiIcon = Winch: Invert control
+				guiName = Winch: Invert control
+				category = Winch: Invert control
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGUI
+			{
+				active = True
+				guiActive = True
+				guiIcon = Show GUI
+				guiName = Show GUI
+				category = Show GUI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugMode
+			{
+				active = True
+				guiActive = True
+				guiIcon = Plug Mode
+				guiName = Plug Mode
+				category = Plug Mode
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuCableStretch
+			{
+				active = True
+				guiActive = True
+				guiIcon = Instant Stretch
+				guiName = Instant Stretch
+				category = Instant Stretch
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEject
+			{
+				active = True
+				guiActive = True
+				guiIcon = Eject
+				guiName = Eject
+				category = Eject
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRetract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract
+				guiName = Retract
+				category = Retract
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuExtend
+			{
+				active = True
+				guiActive = True
+				guiIcon = Extend
+				guiName = Extend
+				category = Extend
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGrabHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab connector
+				guiName = Grab connector
+				category = Grab connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLockHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Lock connector
+				guiName = Lock connector
+				category = Lock connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupEject
+			{
+				actionGroup = None
+			}
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+			ActionGroupRetract
+			{
+				actionGroup = None
+			}
+			ActionGroupExtend
+			{
+				actionGroup = None
+			}
+			ActionGroupPlugMode
+			{
+				actionGroup = None
+			}
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISPartMount
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = False
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupRelease
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+	}
+}
+PART
+{
+	part = KAS.Hook.Magnet_4294173954
+	partName = Part
+	pos = 0.4530395,11.98206,1.73763
+	attPos = 0,0,0
+	attPos0 = 1.192093E-07,-0.3296998,-3.911555E-08
+	rot = -0.9312581,-0.07157822,0.2438133,-0.2611324
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,KAS.Winch2_4294173998
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModuleMagnet
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuMagnet
+			{
+				active = True
+				guiActive = True
+				guiIcon = Magnet On/Off
+				guiName = Magnet On/Off
+				category = Magnet On/Off
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupMagnetToggle
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOn
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOff
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = KAS.Winch2_4294173924
+	partName = Part
+	pos = 2.883161,9.563105,2.030058
+	attPos = 0,0,0
+	attPos0 = -1.105821,-1.25,0.01654735
+	rot = -0.2611324,0.2438133,0.07157821,0.9312581
+	attRot = 0,0.7071067,0.7071067,0
+	attRot0 = 0,1,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KAS.Hook.Magnet_4294173880
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
+	attN = bottom,KAS.Hook.Magnet_4294173880
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModuleWinch
+		isEnabled = True
+		winchName = 
+		controlActivated = True
+		controlInverted = False
+		EVENTS
+		{
+			ContextMenuToggleControl
+			{
+				active = True
+				guiActive = True
+				guiIcon = Winch: Toggle Control
+				guiName = Winch: Toggle Control
+				category = Winch: Toggle Control
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuInvertControl
+			{
+				active = True
+				guiActive = True
+				guiIcon = Winch: Invert control
+				guiName = Winch: Invert control
+				category = Winch: Invert control
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGUI
+			{
+				active = True
+				guiActive = True
+				guiIcon = Show GUI
+				guiName = Show GUI
+				category = Show GUI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugMode
+			{
+				active = True
+				guiActive = True
+				guiIcon = Plug Mode
+				guiName = Plug Mode
+				category = Plug Mode
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuCableStretch
+			{
+				active = True
+				guiActive = True
+				guiIcon = Instant Stretch
+				guiName = Instant Stretch
+				category = Instant Stretch
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEject
+			{
+				active = True
+				guiActive = True
+				guiIcon = Eject
+				guiName = Eject
+				category = Eject
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRetract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract
+				guiName = Retract
+				category = Retract
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuExtend
+			{
+				active = True
+				guiActive = True
+				guiIcon = Extend
+				guiName = Extend
+				category = Extend
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGrabHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab connector
+				guiName = Grab connector
+				category = Grab connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLockHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Lock connector
+				guiName = Lock connector
+				category = Lock connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupEject
+			{
+				actionGroup = None
+			}
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+			ActionGroupRetract
+			{
+				actionGroup = None
+			}
+			ActionGroupExtend
+			{
+				actionGroup = None
+			}
+			ActionGroupPlugMode
+			{
+				actionGroup = None
+			}
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISPartMount
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = False
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupRelease
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+	}
+}
+PART
+{
+	part = KAS.Hook.Magnet_4294173880
+	partName = Part
+	pos = 2.969098,9.281743,2.178907
+	attPos = 0,0,0
+	attPos0 = -1.192093E-07,-0.3297007,-3.911555E-08
+	rot = -0.2611324,0.2438133,0.07157821,0.9312581
+	attRot = 0.9999999,0,0,0
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,KAS.Winch2_4294173924
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModuleMagnet
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuMagnet
+			{
+				active = True
+				guiActive = True
+				guiIcon = Magnet On/Off
+				guiName = Magnet On/Off
+				category = Magnet On/Off
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupMagnetToggle
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOn
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOff
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = KAS.CPort1_4294173850
+	partName = Part
+	pos = 0.9821203,9.525615,3.145363
+	attPos = 0,0,0
+	attPos0 = 1.098108,-1.29,-0.00230297
+	rot = -0.9312581,-0.07157822,0.2438133,-0.2611324
+	attRot = 0,0,0,1
+	attRot0 = 0,0,1,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModuleStrut
+		isEnabled = True
+		pumpFuel = False
+		tgtStrutPartID = 
+		tgtStrutVesselID = 
+		EVENTS
+		{
+			ContextMenuTogglePump
+			{
+				active = False
+				guiActive = True
+				guiIcon = Pump Here
+				guiName = Pump Here
+				category = Pump Here
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Link
+				guiName = Link
+				category = Link
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnlink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unlink
+				guiName = Unlink
+				category = Unlink
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = SmallGearBay_4294173820
+	partName = Part
+	pos = 2.374436,9.283491,2.147717
+	attPos = 0,0,0
+	attPos0 = -0.6032917,-1.409132,0.2866738
+	rot = -0.006035753,0.9671124,-0.01120714,-0.2540313
+	attRot = 0,-0.9659258,-0.258819,0
+	attRot0 = 0.2588191,0,0,-0.9659258
+	mir = 1,1,1
 	symMethod = Mirror
 	istg = 2
 	dstg = 2
@@ -4542,8 +6234,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = SmallGearBay_4294145012
-	srfN = srfAttach,mk2Cockpit.Inline_4294145878
+	sym = SmallGearBay_4294173640
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
 	EVENTS
 	{
 	}
@@ -4809,14 +6501,14 @@ PART
 }
 PART
 {
-	part = SmallGearBay_4294145012
+	part = SmallGearBay_4294173640
 	partName = Part
-	pos = 0.9071115,14.98253,2.874155
+	pos = 1.323667,9.276276,2.740739
 	attPos = 0,0,0
-	attPos0 = 0.4332107,-1.433749,0.4332106
-	rot = -0.06490709,0.9247494,-0.2628701,-0.2674418
-	attRot = 0,0,0,1
-	attRot0 = 8.940697E-08,0,0,1
+	attPos0 = 0.6032917,-1.409132,0.2866738
+	rot = 0.006035753,-0.9671124,0.01120714,0.2540313
+	attRot = 0,-0.9659258,-0.258819,0
+	attRot0 = -0.2588191,0,0,0.9659258
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 2
@@ -4828,8 +6520,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = SmallGearBay_4294145192
-	srfN = srfAttach,mk2Cockpit.Inline_4294145878
+	sym = SmallGearBay_4294173820
+	srfN = srfAttach,mk2Cockpit.Inline_4294174714
 	EVENTS
 	{
 	}
@@ -5083,560 +6775,6 @@ PART
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = ksp.r.largeBatteryPack_4294516638
-	partName = Part
-	pos = 1.988027,16.12051,-2.884729
-	attPos = 0,0,0
-	attPos0 = 0.04231168,0.4455752,-0.3245702
-	rot = -0.2629411,0.2684559,-0.06461889,-0.9244556
-	attRot = 0,0,0,1
-	attRot0 = -5.587935E-08,-1.341104E-07,-2.235174E-08,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,trussPiece3x_4294165640
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 400
-		maxAmount = 400
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = KAS.CPort1_4294493248
-	partName = Part
-	pos = 2.439081,14.59218,-3.75915
-	attPos = 0,0,0
-	attPos0 = -0.005980693,-1.370989,-0.3645692
-	rot = 0.1441346,0.8396162,-0.4677612,0.2355195
-	attRot = 0,0,0,1
-	attRot0 = -1.192093E-07,-0.7071068,0.7071068,-8.009373E-08
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,trussPiece3x_4294165640
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = KASModulePort
-		isEnabled = True
-		plugged = False
-		EVENTS
-		{
-			ContextMenuPlugUndocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Undocked)
-				guiName = Plug(Undocked)
-				category = Plug(Undocked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuPlugDocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Docked)
-				guiName = Plug(Docked)
-				category = Plug(Docked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnplug
-			{
-				active = True
-				guiActive = True
-				guiIcon = Unplug
-				guiName = Unplug
-				category = Unplug
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActionGroupUnplug
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = KASModuleStrut
-		isEnabled = True
-		pumpFuel = False
-		tgtStrutPartID = 
-		tgtStrutVesselID = 
-		EVENTS
-		{
-			ContextMenuTogglePump
-			{
-				active = False
-				guiActive = True
-				guiIcon = Pump Here
-				guiName = Pump Here
-				category = Pump Here
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuLink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Link
-				guiName = Link
-				category = Link
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnlink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unlink
-				guiName = Unlink
-				category = Unlink
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = KAS.CPort1_4294491458
-	partName = Part
-	pos = 2.339878,14.27108,-3.54809
-	attPos = 0,0,0
-	attPos0 = -0.03773277,0.2946017,-0.3245704
-	rot = -0.9244558,-0.0646188,-0.2684555,0.2629409
-	attRot = 0.7071067,0,0,-0.7071067
-	attRot0 = -1.490116E-08,-1,-1.937151E-07,2.980232E-08
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,trussPiece1x_4294165486
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = KASModulePort
-		isEnabled = True
-		plugged = False
-		EVENTS
-		{
-			ContextMenuPlugUndocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Undocked)
-				guiName = Plug(Undocked)
-				category = Plug(Undocked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuPlugDocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Docked)
-				guiName = Plug(Docked)
-				category = Plug(Docked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnplug
-			{
-				active = True
-				guiActive = True
-				guiIcon = Unplug
-				guiName = Unplug
-				category = Unplug
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActionGroupUnplug
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = KASModuleStrut
-		isEnabled = True
-		pumpFuel = False
-		tgtStrutPartID = 
-		tgtStrutVesselID = 
-		EVENTS
-		{
-			ContextMenuTogglePump
-			{
-				active = False
-				guiActive = True
-				guiIcon = Pump Here
-				guiName = Pump Here
-				category = Pump Here
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuLink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Link
-				guiName = Link
-				category = Link
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnlink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unlink
-				guiName = Unlink
-				category = Unlink
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = KAS.CPort1_4294489604
-	partName = Part
-	pos = 2.163142,15.32318,2.474489
-	attPos = 0,0,0
-	attPos0 = -0.8368827,-1.290001,-0.0353861
-	rot = 0.9565483,0.1081746,-0.1081747,0.2482177
-	attRot = 0,0,0,1
-	attRot0 = -0.1681113,-3.087333E-07,0.985768,-2.2538E-07
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,mk2Cockpit.Inline_4294145878
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = KASModulePort
-		isEnabled = True
-		plugged = False
-		EVENTS
-		{
-			ContextMenuPlugUndocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Undocked)
-				guiName = Plug(Undocked)
-				category = Plug(Undocked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuPlugDocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Docked)
-				guiName = Plug(Docked)
-				category = Plug(Docked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnplug
-			{
-				active = True
-				guiActive = True
-				guiIcon = Unplug
-				guiName = Unplug
-				category = Unplug
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActionGroupUnplug
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = KASModuleStrut
-		isEnabled = True
-		pumpFuel = False
-		tgtStrutPartID = 
-		tgtStrutVesselID = 
-		EVENTS
-		{
-			ContextMenuTogglePump
-			{
-				active = False
-				guiActive = True
-				guiIcon = Pump Here
-				guiName = Pump Here
-				category = Pump Here
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuLink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Link
-				guiName = Link
-				category = Link
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnlink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unlink
-				guiName = Unlink
-				category = Unlink
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = KAS.CPort1_4294488488
-	partName = Part
-	pos = 0.1543167,17.60358,2.23
-	attPos = 0,0,0
-	attPos0 = 0.7852612,1.290002,-0.1224242
-	rot = -0.2057921,-0.1759642,0.1759642,0.9464266
-	attRot = 0,0,0,1
-	attRot0 = 1.15484E-07,-0.8936649,-3.576279E-07,-0.4487351
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,mk2Cockpit.Inline_4294145878
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = KASModulePort
-		isEnabled = True
-		plugged = False
-		EVENTS
-		{
-			ContextMenuPlugUndocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Undocked)
-				guiName = Plug(Undocked)
-				category = Plug(Undocked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuPlugDocked
-			{
-				active = True
-				guiActive = False
-				guiIcon = Plug(Docked)
-				guiName = Plug(Docked)
-				category = Plug(Docked)
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnplug
-			{
-				active = True
-				guiActive = True
-				guiIcon = Unplug
-				guiName = Unplug
-				category = Unplug
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ActionGroupUnplug
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = KASModuleStrut
-		isEnabled = True
-		pumpFuel = False
-		tgtStrutPartID = 
-		tgtStrutVesselID = 
-		EVENTS
-		{
-			ContextMenuTogglePump
-			{
-				active = False
-				guiActive = True
-				guiIcon = Pump Here
-				guiName = Pump Here
-				category = Pump Here
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuLink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Link
-				guiName = Link
-				category = Link
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuUnlink
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unlink
-				guiName = Unlink
-				category = Unlink
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True

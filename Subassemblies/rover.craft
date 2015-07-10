@@ -2,30 +2,30 @@ ship = rover
 version = 1.0.2
 description = No description.
 type = None
-size = 2.663158,2.726074,6.603986
+size = 2.6874,2.649012,4.330855
 PART
 {
-	part = stackPoint1_4294300548
+	part = dockingPort2_4294354510
 	partName = Part
-	pos = 0.007658788,13.1117,0.8101487
+	pos = -0.2345818,3.299268,1.370014
 	attPos = 0,0,0
-	attPos0 = 0.007658788,13.1117,0.8101487
-	rot = 1,0,0,0
+	attPos0 = -0.2345818,3.299268,1.370014
+	rot = 0.7071068,0,0,-0.7071068
 	attRot = 0.9999999,0,0,0
-	attRot0 = 0,0,0,1
+	attRot0 = 0.7071068,0,0,0.7071068
 	mir = 1,1,1
-	symMethod = Radial
+	symMethod = Mirror
 	istg = 0
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
-	attm = 1
+	sepI = 1
+	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = mk2Cockpit.Inline_4294416416
-	srfN = srfAttach,mk2Cockpit.Inline_4294416416
+	link = batteryBank_4294312904
+	attN = bottom,batteryBank_4294312904
 	EVENTS
 	{
 	}
@@ -35,34 +35,193 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+			Undock
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			UndockSameVessel
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple Node
+				guiName = Decouple Node
+				category = Decouple Node
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			SetAsTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Set as Target
+				guiName = Set as Target
+				category = Set as Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			UnsetTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unset Target
+				guiName = Unset Target
+				category = Unset Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			EnableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable Crossfeed
+				guiName = Enable Crossfeed
+				category = Enable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Disable Crossfeed
+				guiName = Disable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			MakeReferenceTransform
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control from Here
+				guiName = Control from Here
+				category = Control from Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
 }
 PART
 {
-	part = mk2Cockpit.Inline_4294416416
+	part = batteryBank_4294312904
 	partName = Part
-	pos = 0.1382502,13.9217,0.7607226
+	pos = -0.2345818,3.299268,1.480869
 	attPos = 0,0,0
-	attPos0 = -0.03761857,10.40139,0.3815484
+	attPos0 = 0,-0.1108553,-1.321498E-08
 	rot = 0.7071068,0,0,0.7071068
 	attRot = 0,0,0,1
-	attRot0 = 0.7071068,0,0,0.7071068
+	attRot0 = -1,0,0,0
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 0
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294352642
+	link = mk2Cockpit.Inline_4294416416
+	attN = top,mk2Cockpit.Inline_4294416416
+	attN = bottom,dockingPort2_4294354510
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = mk2Cockpit.Inline_4294416416
+	partName = Part
+	pos = -0.2345818,3.299268,2.841724
+	attPos = 0,0,0
+	attPos0 = 0,1.360855,1.622266E-07
+	rot = 0,0.7071068,-0.7071068,0
+	attRot = 0,0,-0.9999999,0
+	attRot0 = 0,0,-1,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
 	link = trussPiece1x_4294347048
 	link = trussPiece1x_4294346132
-	link = batteryBank_4294312904
-	attN = top,dockingPort2_4294352642
-	attN = bottom,batteryBank_4294312904
+	link = dockingPort2_4294352642
+	link = KAS.CPort1_4294561284
+	link = KAS.Winch2_4294539118
+	link = KAS.Winch2_4294539920
+	link = KAS.CPort1_4294242742
+	link = SmallGearBay_4294259856
+	link = SmallGearBay_4294251798
+	attN = top,batteryBank_4294312904
+	attN = bottom,dockingPort2_4294352642
 	EVENTS
 	{
 	}
@@ -532,154 +691,12 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294352642
-	partName = Part
-	pos = 0.1382502,13.9217,2.010724
-	attPos = 0,0,0
-	attPos0 = 0,1.25,-1.490116E-07
-	rot = 0.7071068,0,0,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	attN = bottom,mk2Cockpit.Inline_4294416416
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-			Undock
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = False
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MakeReferenceTransform
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
 	part = trussPiece1x_4294347048
 	partName = Part
-	pos = 0.1382502,13.1906,1.443669
+	pos = -0.2345818,2.56817,2.158778
 	attPos = 0,0,0
 	attPos0 = 0,0.6829461,0.7310963
-	rot = 0.707107,0,0,-0.7071066
+	rot = 0,-0.7071066,-0.7071069,0
 	attRot = 0.7071068,0,0,0.7071068
 	attRot0 = 1,0,0,1.788139E-07
 	mir = 1,1,1
@@ -688,7 +705,7 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -710,10 +727,10 @@ PART
 {
 	part = wheelMed_4294320472
 	partName = Part
-	pos = 0.4628192,13.00031,1.704703
-	attPos = 0,0,0
+	pos = -0.5591508,2.454937,1.897745
+	attPos = 0,1.311302E-06,0.07705875
 	attPos0 = 0.324569,-0.2610337,-0.1902915
-	rot = 0,1,-2.384186E-07,0
+	rot = -2.682209E-07,-2.131628E-14,-3.316187E-15,-1
 	attRot = 0.7071067,0,0,-0.7071067
 	attRot0 = 0,-0.7071069,-0.7071068,0
 	mir = 1,1,1
@@ -722,7 +739,7 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -873,10 +890,10 @@ PART
 {
 	part = wheelMed_4294317614
 	partName = Part
-	pos = -0.1863188,13.00031,1.704703
-	attPos = 0,0,0
+	pos = 0.0899871,2.454937,1.897745
+	attPos = -2.980232E-08,1.072884E-06,0.07705875
 	attPos0 = -0.324569,-0.2610337,-0.1902915
-	rot = 2.384186E-07,-4.37114E-08,-1.776357E-15,-1
+	rot = -1.776357E-15,-1,-2.682209E-07,4.37114E-08
 	attRot = 0.7071067,0,0,-0.7071067
 	attRot0 = 0.7071068,3.090862E-08,3.090862E-08,0.7071069
 	mir = 1,1,1
@@ -885,7 +902,7 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -1036,10 +1053,10 @@ PART
 {
 	part = trussPiece1x_4294346132
 	partName = Part
-	pos = 0.1382502,13.19168,0.08070672
+	pos = -0.2345818,2.569252,3.52174
 	attPos = 0,0,0
 	attPos0 = 0,-0.6800156,0.730014
-	rot = -0.7071066,0,0,-0.707107
+	rot = 0,-0.7071069,0.7071066,0
 	attRot = 0.7071067,0,0,-0.7071067
 	attRot0 = 1.788139E-07,0,0,-1
 	mir = 1,1,1
@@ -1048,7 +1065,7 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -1070,10 +1087,10 @@ PART
 {
 	part = wheelMed_4294321838
 	partName = Part
-	pos = 0.4628192,13.03229,-0.2133534
-	attPos = 0,0,0
+	pos = -0.5591508,2.498483,3.815799
+	attPos = 0,-2.384186E-07,-0.08862216
 	attPos0 = 0.324569,-0.2940599,0.1593905
-	rot = 2.980232E-08,-1,0,2.980232E-08
+	rot = 0,-2.980233E-08,2.980231E-08,-1
 	attRot = -0.7071067,0,0,-0.7071067
 	attRot0 = -7.105427E-15,0.7071069,-0.7071067,-4.214684E-08
 	mir = 1,1,1
@@ -1082,7 +1099,7 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -1233,10 +1250,10 @@ PART
 {
 	part = wheelMed_4294315610
 	partName = Part
-	pos = -0.1863188,13.03229,-0.2133534
-	attPos = 0,0,0
+	pos = 0.0899871,2.498483,3.815799
+	attPos = -2.980232E-08,0,-0.08862216
 	attPos0 = -0.324569,-0.2940599,0.1593905
-	rot = 0,-1.390907E-08,2.980231E-08,-1
+	rot = 2.980231E-08,-1,0,1.390907E-08
 	attRot = -0.7071067,0,0,-0.7071067
 	attRot0 = -0.7071067,-1.123821E-08,-3.090862E-08,0.7071069
 	mir = 1,1,1
@@ -1245,7 +1262,7 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -1394,28 +1411,26 @@ PART
 }
 PART
 {
-	part = batteryBank_4294312904
+	part = dockingPort2_4294352642
 	partName = Part
-	pos = 0.1382502,13.9217,-0.6001346
+	pos = -0.2345818,3.299267,4.091724
 	attPos = 0,0,0
-	attPos0 = 0,-0.1108553,6.607493E-09
+	attPos0 = 0,-1.25,1.490116E-07
 	rot = 0.7071068,0,0,0.7071068
 	attRot = 0,0,0,1
-	attRot0 = -1,0,0,0
+	attRot0 = 0,0,1,0
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 0
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 2
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294354510
-	attN = top,mk2Cockpit.Inline_4294416416
-	attN = bottom,dockingPort2_4294354510
+	attN = bottom,mk2Cockpit.Inline_4294416416
 	EVENTS
 	{
 	}
@@ -1425,29 +1440,512 @@ PART
 	PARTDATA
 	{
 	}
-	RESOURCE
+	MODULE
 	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
+		name = ModuleDockingNode
+		isEnabled = True
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+			Undock
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			UndockSameVessel
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple Node
+				guiName = Decouple Node
+				category = Decouple Node
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			SetAsTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Set as Target
+				guiName = Set as Target
+				category = Set as Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			UnsetTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unset Target
+				guiName = Unset Target
+				category = Unset Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			EnableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable Crossfeed
+				guiName = Enable Crossfeed
+				category = Enable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Disable Crossfeed
+				guiName = Disable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			MakeReferenceTransform
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control from Here
+				guiName = Control from Here
+				category = Control from Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
 	}
 }
 PART
 {
-	part = dockingPort2_4294354510
+	part = KAS.CPort1_4294561284
 	partName = Part
-	pos = 0.1382502,13.9217,-0.7109896
+	pos = 0.5799433,3.29671,1.551723
 	attPos = 0,0,0
-	attPos0 = 0,0.5657664,-6.74446E-08
+	attPos0 = -0.8145247,1.290001,0.002557601
 	rot = 0.7071068,0,0,-0.7071068
-	attRot = 0.9999999,0,0,0
-	attRot0 = 1,0,0,0
+	attRot = 0,0,0,1
+	attRot0 = 0,1,0,0
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk2Cockpit.Inline_4294416416
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModuleStrut
+		isEnabled = True
+		pumpFuel = False
+		tgtStrutPartID = 
+		tgtStrutVesselID = 
+		EVENTS
+		{
+			ContextMenuTogglePump
+			{
+				active = False
+				guiActive = True
+				guiIcon = Pump Here
+				guiName = Pump Here
+				category = Pump Here
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Link
+				guiName = Link
+				category = Link
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnlink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unlink
+				guiName = Unlink
+				category = Unlink
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KAS.Winch2_4294539118
+	partName = Part
+	pos = -1.086872,3.313171,1.591723
+	attPos = 0,0,0
+	attPos0 = 0.852291,1.250001,-0.01390282
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,-0.7071067,-0.7071067,0
+	attRot0 = 0,0,1,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KAS.Hook.Magnet_4294510928
+	srfN = srfAttach,mk2Cockpit.Inline_4294416416
+	attN = bottom,KAS.Hook.Magnet_4294510928
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModuleWinch
+		isEnabled = True
+		winchName = 
+		controlActivated = True
+		controlInverted = False
+		EVENTS
+		{
+			ContextMenuToggleControl
+			{
+				active = True
+				guiActive = True
+				guiIcon = Winch: Toggle Control
+				guiName = Winch: Toggle Control
+				category = Winch: Toggle Control
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuInvertControl
+			{
+				active = True
+				guiActive = True
+				guiIcon = Winch: Invert control
+				guiName = Winch: Invert control
+				category = Winch: Invert control
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGUI
+			{
+				active = True
+				guiActive = True
+				guiIcon = Show GUI
+				guiName = Show GUI
+				category = Show GUI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugMode
+			{
+				active = True
+				guiActive = True
+				guiIcon = Plug Mode
+				guiName = Plug Mode
+				category = Plug Mode
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuCableStretch
+			{
+				active = True
+				guiActive = True
+				guiIcon = Instant Stretch
+				guiName = Instant Stretch
+				category = Instant Stretch
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEject
+			{
+				active = True
+				guiActive = True
+				guiIcon = Eject
+				guiName = Eject
+				category = Eject
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRetract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract
+				guiName = Retract
+				category = Retract
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuExtend
+			{
+				active = True
+				guiActive = True
+				guiIcon = Extend
+				guiName = Extend
+				category = Extend
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGrabHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab connector
+				guiName = Grab connector
+				category = Grab connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLockHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Lock connector
+				guiName = Lock connector
+				category = Lock connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupEject
+			{
+				actionGroup = None
+			}
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+			ActionGroupRetract
+			{
+				actionGroup = None
+			}
+			ActionGroupExtend
+			{
+				actionGroup = None
+			}
+			ActionGroupPlugMode
+			{
+				actionGroup = None
+			}
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISPartMount
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = False
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupRelease
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+	}
+}
+PART
+{
+	part = KAS.Hook.Magnet_4294510928
+	partName = Part
+	pos = -1.086872,3.313171,1.262023
+	attPos = 0,0,0
+	attPos0 = 1.192093E-07,-0.3296998,-3.911555E-08
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
 	istg = 0
 	dstg = 0
 	sidx = -1
@@ -1457,9 +1955,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294286332
-	attN = top,dockingPort2_4294286332
-	attN = bottom,batteryBank_4294312904
+	attN = top,KAS.Winch2_4294539118
 	EVENTS
 	{
 	}
@@ -1471,109 +1967,82 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDockingNode
+		name = KASModuleMagnet
 		isEnabled = True
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
 		EVENTS
 		{
-			Undock
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = False
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MakeReferenceTransform
+			ContextMenuMagnet
 			{
 				active = True
 				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
-				guiActiveUnfocused = False
+				guiIcon = Magnet On/Off
+				guiName = Magnet On/Off
+				category = Magnet On/Off
+				guiActiveUnfocused = True
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
 		ACTIONS
 		{
-			UndockAction
+			ActionGroupMagnetToggle
 			{
 				actionGroup = None
 			}
-			DecoupleAction
+			ActionGroupMagnetOn
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOff
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
 			{
 				actionGroup = None
 			}
@@ -1582,28 +2051,28 @@ PART
 }
 PART
 {
-	part = dockingPort2_4294286332
+	part = KAS.Winch2_4294539920
 	partName = Part
-	pos = 0.1382502,13.9217,-1.276757
+	pos = 0.8712393,3.28272,4.091724
 	attPos = 0,0,0
-	attPos0 = 0.3469432,10.58991,1.338875
-	rot = 0.7071068,0,0,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0.7071068,0,0,0.7071068
+	attPos0 = -1.105821,-1.25,0.01654735
+	rot = 0.7071068,0,0,-0.7071068
+	attRot = 0,0.7071067,0.7071067,0
+	attRot0 = 0,1,0,0
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 0
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 2
-	attm = 0
+	sepI = 1
+	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = mk2Cockpit.Inline_4294286446
-	attN = top,dockingPort2_4294354510
-	attN = bottom,mk2Cockpit.Inline_4294286446
+	link = KAS.Hook.Magnet_4294511890
+	srfN = srfAttach,mk2Cockpit.Inline_4294416416
+	attN = bottom,KAS.Hook.Magnet_4294511890
 	EVENTS
 	{
 	}
@@ -1615,97 +2084,211 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDockingNode
+		name = KASModuleWinch
 		isEnabled = True
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
+		winchName = 
+		controlActivated = True
+		controlInverted = False
 		EVENTS
 		{
-			Undock
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = False
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
+			ContextMenuToggleControl
 			{
 				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
 				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
+				guiIcon = Winch: Toggle Control
+				guiName = Winch: Toggle Control
+				category = Winch: Toggle Control
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			DisableXFeed
+			ContextMenuInvertControl
 			{
-				active = False
+				active = True
 				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
+				guiIcon = Winch: Invert control
+				guiName = Winch: Invert control
+				category = Winch: Invert control
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			MakeReferenceTransform
+			ContextMenuGUI
 			{
 				active = True
 				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
+				guiIcon = Show GUI
+				guiName = Show GUI
+				category = Show GUI
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugMode
+			{
+				active = True
+				guiActive = True
+				guiIcon = Plug Mode
+				guiName = Plug Mode
+				category = Plug Mode
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuCableStretch
+			{
+				active = True
+				guiActive = True
+				guiIcon = Instant Stretch
+				guiName = Instant Stretch
+				category = Instant Stretch
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEject
+			{
+				active = True
+				guiActive = True
+				guiIcon = Eject
+				guiName = Eject
+				category = Eject
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRetract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract
+				guiName = Retract
+				category = Retract
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuExtend
+			{
+				active = True
+				guiActive = True
+				guiIcon = Extend
+				guiName = Extend
+				category = Extend
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuGrabHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab connector
+				guiName = Grab connector
+				category = Grab connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLockHead
+			{
+				active = True
+				guiActive = False
+				guiIcon = Lock connector
+				guiName = Lock connector
+				category = Lock connector
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupEject
+			{
+				actionGroup = None
+			}
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+			ActionGroupRetract
+			{
+				actionGroup = None
+			}
+			ActionGroupExtend
+			{
+				actionGroup = None
+			}
+			ActionGroupPlugMode
+			{
+				actionGroup = None
+			}
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupToggleInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupEnableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+			ActionGroupDisableInvertedKeyControl
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISPartMount
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = False
+				guiIcon = Release
+				guiName = Release
+				category = Release
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1713,25 +2296,22 @@ PART
 		}
 		ACTIONS
 		{
-			UndockAction
+			ActionGroupRelease
 			{
 				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
+				active = False
 			}
 		}
 	}
 }
 PART
 {
-	part = mk2Cockpit.Inline_4294286446
+	part = KAS.Hook.Magnet_4294511890
 	partName = Part
-	pos = 0.1382502,13.9217,-2.526758
+	pos = 0.8712392,3.28272,4.421428
 	attPos = 0,0,0
-	attPos0 = 0,1.532883,-9.136695E-08
-	rot = 0.7071068,0,0,0.7071068
+	attPos0 = -1.192093E-07,-0.3297007,-3.911555E-08
+	rot = 0.7071068,0,0,-0.7071068
 	attRot = 0.9999999,0,0,0
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -1740,17 +2320,12 @@ PART
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = trussPiece1x_4294286288
-	link = trussPiece1x_4294286018
-	link = stackPoint1_4294285748
-	link = batteryBank_4294245058
-	attN = top,dockingPort2_4294286332
-	attN = bottom,batteryBank_4294245058
+	attN = top,KAS.Winch2_4294539920
 	EVENTS
 	{
 	}
@@ -1762,29 +2337,206 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCommand
+		name = KASModuleMagnet
 		isEnabled = True
-		controlSrcStatusText = 
 		EVENTS
 		{
-			MakeReference
+			ContextMenuMagnet
 			{
 				active = True
 				guiActive = True
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
+				guiIcon = Magnet On/Off
+				guiName = Magnet On/Off
+				category = Magnet On/Off
+				guiActiveUnfocused = True
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			RenameVessel
+		}
+		ACTIONS
+		{
+			ActionGroupMagnetToggle
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOn
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOff
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
 			{
 				active = True
 				guiActive = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = KAS.CPort1_4294242742
+	partName = Part
+	pos = -1.332691,3.301571,4.131725
+	attPos = 0,0,0
+	attPos0 = 1.098108,-1.29,-0.00230297
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,1,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk2Cockpit.Inline_4294416416
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		plugged = False
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModuleStrut
+		isEnabled = True
+		pumpFuel = False
+		tgtStrutPartID = 
+		tgtStrutVesselID = 
+		EVENTS
+		{
+			ContextMenuTogglePump
+			{
+				active = False
+				guiActive = True
+				guiIcon = Pump Here
+				guiName = Pump Here
+				category = Pump Here
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Link
+				guiName = Link
+				category = Link
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnlink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unlink
+				guiName = Unlink
+				category = Unlink
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1794,260 +2546,268 @@ PART
 		{
 		}
 	}
+}
+PART
+{
+	part = SmallGearBay_4294259856
+	partName = Part
+	pos = 0.36871,3.012594,4.250857
+	attPos = 0,0,0
+	attPos0 = -0.6032917,-1.409132,0.2866738
+	rot = 0,-0.8660254,0.4999999,0
+	attRot = 0,-0.9659258,-0.258819,0
+	attRot0 = 0.2588191,0,0,-0.9659258
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = SmallGearBay_4294251798
+	srfN = srfAttach,mk2Cockpit.Inline_4294416416
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
 	MODULE
 	{
-		name = ModuleReactionWheel
+		name = ModuleLandingGear
 		isEnabled = True
-		stateString = Active
-		WheelState = Active
+		BrakeTorque = 12
+		brakesEngaged = False
+		brakesEnabled = True
+		storedGearState = UNDEFINED
+		storedAnimationSpeed = 0
+		storedAnimationTime = 0
+		StartDeployed = True
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
-			OnToggle
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LowerLandingGear
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Gear
+				guiName = Lower Gear
+				category = Lower Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RaiseLandingGear
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Gear
+				guiName = Raise Gear
+				category = Raise Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = True
+		invertSteering = False
+		EVENTS
+		{
+			UnLockSteering
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle Torque
-				guiName = Toggle Torque
-				category = Toggle Torque
+				guiIcon = Unlock Steering
+				guiName = Unlock Steering
+				category = Unlock Steering
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-		}
-		ACTIONS
-		{
-			Activate
-			{
-				actionGroup = None
-			}
-			Deactivate
-			{
-				actionGroup = None
-			}
-			Toggle
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		EVENTS
-		{
-			StoreDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Store Experiments (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 3
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = False
-				guiActive = False
-				guiIcon = 
-				guiName = Take Data (0)
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 3
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
+			LockSteering
 			{
 				active = False
 				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Stored Data (0)
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
 				guiActiveEditor = True
-				guiIcon = Toggle Flag
-				guiName = Toggle Flag
-				category = Toggle Flag
+				guiIcon = Lock Steering
+				guiName = Lock Steering
+				category = Lock Steering
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		status = Locked
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		EVENTS
-		{
-			Toggle
+			InvertSteering
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Toggle
+				guiIcon = Invert Steering
+				guiName = Invert Steering
+				category = Invert Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InvertSteeringAction
+			{
+				actionGroup = None
+			}
+			LockSteeringAction
+			{
+				actionGroup = None
+			}
+			UnlockSteeringAction
+			{
+				actionGroup = None
+			}
+			ToggleSteeringAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FXModuleConstrainPosition
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
 				guiName = Lights On
-				category = Toggle
-				guiActiveUnfocused = True
-				unfocusedRange = 5
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
 		ACTIONS
 		{
-			ToggleAction
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = LifeSupportModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
+			LightOffAction
+			{
+				actionGroup = None
+			}
 		}
 	}
 	MODULE
@@ -2072,209 +2832,30 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleTripLogger
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		Log
-		{
-			flight = 0
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		EVENTS
-		{
-			ShowInventory
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		EVENTS
-		{
-			ShowInventory
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 500
-		maxAmount = 500
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = MonoPropellant
-		amount = 25
-		maxAmount = 25
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Food
-		amount = 2.194
-		maxAmount = 2.194
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Water
-		amount = 1.45
-		maxAmount = 1.45
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxygen
-		amount = 222.076
-		maxAmount = 222.076
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = CarbonDioxide
-		amount = 0
-		maxAmount = 191.826
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Waste
-		amount = 0
-		maxAmount = 0.2
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = WasteWater
-		amount = 0
-		maxAmount = 1.848
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
 }
 PART
 {
-	part = trussPiece1x_4294286288
+	part = SmallGearBay_4294251798
 	partName = Part
-	pos = 0.1382502,13.1906,-1.84381
+	pos = -0.8378736,3.012594,4.250857
 	attPos = 0,0,0
-	attPos0 = 0,0.6829461,0.7310963
-	rot = 0.707107,0,0,-0.7071066
-	attRot = 0.7071068,0,0,0.7071068
-	attRot0 = 1,0,0,1.788139E-07
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = wheelMed_4294286262
-	link = wheelMed_4294286140
-	srfN = srfAttach,mk2Cockpit.Inline_4294286446
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = wheelMed_4294286262
-	partName = Part
-	pos = 0.4628192,13.00031,-1.582778
-	attPos = 0,0,0
-	attPos0 = 0.324569,-0.2610337,-0.1902915
-	rot = 0,1,-2.384186E-07,0
-	attRot = 0.7071067,0,0,-0.7071067
-	attRot0 = 0,-0.7071069,-0.7071068,0
+	attPos0 = 0.6032917,-1.409132,0.2866738
+	rot = 0,0.8660254,-0.4999999,0
+	attRot = 0,-0.9659258,-0.258819,0
+	attRot0 = -0.2588191,0,0,0.9659258
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
 	dstg = 0
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294286140
-	srfN = srfAttach,trussPiece1x_4294286288
+	sym = SmallGearBay_4294259856
+	srfN = srfAttach,mk2Cockpit.Inline_4294416416
 	EVENTS
 	{
 	}
@@ -2286,26 +2867,98 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleWheel
+		name = ModuleLandingGear
 		isEnabled = True
-		brakeTorque = 500
+		BrakeTorque = 12
 		brakesEngaged = False
-		steeringLocked = False
-		isDamaged = False
-		invertSteering = False
-		motorEnabled = True
-		brakeTorque_UIFlight
+		brakesEnabled = True
+		storedGearState = UNDEFINED
+		storedAnimationSpeed = 0
+		storedAnimationTime = 0
+		StartDeployed = True
+		BrakeTorque_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
 			maxValue = 30
 			stepIncrement = 1
 		}
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LowerLandingGear
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Gear
+				guiName = Lower Gear
+				category = Lower Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RaiseLandingGear
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Gear
+				guiName = Raise Gear
+				category = Raise Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = True
+		invertSteering = False
 		EVENTS
 		{
 			UnLockSteering
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Unlock Steering
@@ -2317,36 +2970,12 @@ PART
 			}
 			LockSteering
 			{
-				active = True
+				active = False
 				guiActive = True
 				guiActiveEditor = True
 				guiIcon = Lock Steering
 				guiName = Lock Steering
 				category = Lock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EnableMotor
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Enable Motor
-				guiName = Enable Motor
-				category = Enable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableMotor
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Disable Motor
-				guiName = Disable Motor
-				category = Disable Motor
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2361,17 +2990,6 @@ PART
 				category = Invert Steering
 				guiActiveUnfocused = False
 				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RepairWheel
-			{
-				active = True
-				guiActive = False
-				guiIcon = Repair Wheel
-				guiName = Repair Wheel
-				category = Repair Wheel
-				guiActiveUnfocused = True
-				unfocusedRange = 4
 				externalToEVAOnly = True
 			}
 		}
@@ -2393,14 +3011,6 @@ PART
 			{
 				actionGroup = None
 			}
-			ToggleMotorAction
-			{
-				actionGroup = None
-			}
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
 		}
 	}
 	MODULE
@@ -2414,730 +3024,91 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = wheelMed_4294286140
-	partName = Part
-	pos = -0.1863188,13.00031,-1.582778
-	attPos = 0,0,0
-	attPos0 = -0.324569,-0.2610337,-0.1902915
-	rot = 2.384186E-07,-4.37114E-08,-1.776357E-15,-1
-	attRot = 0.7071067,0,0,-0.7071067
-	attRot0 = 0.7071068,3.090862E-08,3.090862E-08,0.7071069
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294286262
-	srfN = srfAttach,trussPiece1x_4294286288
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = ModuleWheel
+		name = ModuleLight
 		isEnabled = True
-		brakeTorque = 500
-		brakesEngaged = False
-		steeringLocked = False
-		isDamaged = False
-		invertSteering = False
-		motorEnabled = True
-		brakeTorque_UIFlight
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
+			maxValue = 1
+			stepIncrement = 0.05
 		}
-		EVENTS
-		{
-			UnLockSteering
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LockSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EnableMotor
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Enable Motor
-				guiName = Enable Motor
-				category = Enable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableMotor
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Disable Motor
-				guiName = Disable Motor
-				category = Disable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			InvertSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RepairWheel
-			{
-				active = True
-				guiActive = False
-				guiIcon = Repair Wheel
-				guiName = Repair Wheel
-				category = Repair Wheel
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			InvertSteeringAction
-			{
-				actionGroup = None
-			}
-			LockSteeringAction
-			{
-				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleMotorAction
-			{
-				actionGroup = None
-			}
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
-		}
-	}
-	MODULE
-	{
-		name = FXModuleConstrainPosition
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = trussPiece1x_4294286018
-	partName = Part
-	pos = 0.1382502,13.19168,-3.206774
-	attPos = 0,0,0
-	attPos0 = 0,-0.6800156,0.730014
-	rot = -0.7071066,0,0,-0.707107
-	attRot = 0.7071067,0,0,-0.7071067
-	attRot0 = 1.788139E-07,0,0,-1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = wheelMed_4294285992
-	link = wheelMed_4294285870
-	srfN = srfAttach,mk2Cockpit.Inline_4294286446
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = wheelMed_4294285992
-	partName = Part
-	pos = 0.4628192,13.03229,-3.500834
-	attPos = 0,0,0
-	attPos0 = 0.324569,-0.2940599,0.1593905
-	rot = 2.980232E-08,-1,0,2.980232E-08
-	attRot = -0.7071067,0,0,-0.7071067
-	attRot0 = -7.105427E-15,0.7071069,-0.7071067,-4.214684E-08
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294285870
-	srfN = srfAttach,trussPiece1x_4294286018
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleWheel
-		isEnabled = True
-		brakeTorque = 500
-		brakesEngaged = False
-		steeringLocked = False
-		isDamaged = False
-		invertSteering = False
-		motorEnabled = True
-		brakeTorque_UIFlight
+		lightG_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
+			maxValue = 1
+			stepIncrement = 0.05
 		}
-		EVENTS
-		{
-			UnLockSteering
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LockSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EnableMotor
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Enable Motor
-				guiName = Enable Motor
-				category = Enable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableMotor
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Disable Motor
-				guiName = Disable Motor
-				category = Disable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			InvertSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RepairWheel
-			{
-				active = True
-				guiActive = False
-				guiIcon = Repair Wheel
-				guiName = Repair Wheel
-				category = Repair Wheel
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			InvertSteeringAction
-			{
-				actionGroup = None
-			}
-			LockSteeringAction
-			{
-				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleMotorAction
-			{
-				actionGroup = None
-			}
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
-		}
-	}
-	MODULE
-	{
-		name = FXModuleConstrainPosition
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = wheelMed_4294285870
-	partName = Part
-	pos = -0.1863188,13.03229,-3.500834
-	attPos = 0,0,0
-	attPos0 = -0.324569,-0.2940599,0.1593905
-	rot = 0,-1.390907E-08,2.980231E-08,-1
-	attRot = -0.7071067,0,0,-0.7071067
-	attRot0 = -0.7071067,-1.123821E-08,-3.090862E-08,0.7071069
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = wheelMed_4294285992
-	srfN = srfAttach,trussPiece1x_4294286018
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleWheel
-		isEnabled = True
-		brakeTorque = 500
-		brakesEngaged = False
-		steeringLocked = False
-		isDamaged = False
-		invertSteering = False
-		motorEnabled = True
-		brakeTorque_UIFlight
+		lightB_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
+			maxValue = 1
+			stepIncrement = 0.05
 		}
 		EVENTS
 		{
-			UnLockSteering
+			LightsOff
 			{
 				active = False
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			LockSteering
+			LightsOn
 			{
 				active = True
 				guiActive = True
 				guiActiveEditor = True
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
 				guiActiveUnfocused = False
 				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			EnableMotor
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Enable Motor
-				guiName = Enable Motor
-				category = Enable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableMotor
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Disable Motor
-				guiName = Disable Motor
-				category = Disable Motor
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			InvertSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RepairWheel
-			{
-				active = True
-				guiActive = False
-				guiIcon = Repair Wheel
-				guiName = Repair Wheel
-				category = Repair Wheel
-				guiActiveUnfocused = True
-				unfocusedRange = 4
 				externalToEVAOnly = True
 			}
 		}
 		ACTIONS
 		{
-			InvertSteeringAction
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
 			{
 				actionGroup = None
 			}
-			LockSteeringAction
+			LightOffAction
 			{
 				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleMotorAction
-			{
-				actionGroup = None
-			}
-			BrakesAction
-			{
-				actionGroup = Brakes
 			}
 		}
 	}
 	MODULE
 	{
-		name = FXModuleConstrainPosition
+		name = ModuleTestSubject
 		isEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = stackPoint1_4294285748
-	partName = Part
-	pos = 0.007658788,13.1117,-2.477331
-	attPos = 0,0,0
-	attPos0 = -0.1305914,0.04942584,0.8099991
-	rot = 1,0,0,0
-	attRot = 0,0,0,1
-	attRot0 = 0.7071068,0,0,0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,mk2Cockpit.Inline_4294286446
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = batteryBank_4294245058
-	partName = Part
-	pos = 0.1382502,13.92169,-3.887614
-	attPos = 0,0,0
-	attPos0 = 0,-1.360855,4.602499E-07
-	rot = 0.7071068,0,0,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 2
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = dockingPort2_4294221038
-	attN = top,mk2Cockpit.Inline_4294286446
-	attN = bottom,dockingPort2_4294221038
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = dockingPort2_4294221038
-	partName = Part
-	pos = 0.1382502,13.92169,-3.99847
-	attPos = 0,0,0
-	attPos0 = 0,-0.1108553,1.321499E-08
-	rot = 0.7071068,0,0,-0.7071068
-	attRot = 0.9999999,0,0,0
-	attRot0 = 1,0,0,0
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	attN = bottom,batteryBank_4294245058
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDockingNode
-		isEnabled = True
-		state = Ready
-		dockUId = 0
-		dockNodeIdx = 0
-		EVENTS
-		{
-			Undock
+			RunTestEvent
 			{
 				active = False
 				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			UndockSameVessel
-			{
-				active = False
-				guiActive = True
-				guiIcon = Undock
-				guiName = Undock
-				category = Undock
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Decouple
-			{
-				active = False
-				guiActive = True
-				guiIcon = Decouple Node
-				guiName = Decouple Node
-				category = Decouple Node
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			SetAsTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Set as Target
-				guiName = Set as Target
-				category = Set as Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			UnsetTarget
-			{
-				active = True
-				guiActive = False
-				guiIcon = Unset Target
-				guiName = Unset Target
-				category = Unset Target
-				guiActiveUnfocused = True
-				unfocusedRange = 200
-				externalToEVAOnly = False
-			}
-			EnableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Enable Crossfeed
-				guiName = Enable Crossfeed
-				category = Enable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableXFeed
-			{
-				active = False
-				guiActive = True
-				guiIcon = Disable Crossfeed
-				guiName = Disable Crossfeed
-				category = Disable Crossfeed
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MakeReferenceTransform
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control from Here
-				guiName = Control from Here
-				category = Control from Here
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3145,14 +3116,6 @@ PART
 		}
 		ACTIONS
 		{
-			UndockAction
-			{
-				actionGroup = None
-			}
-			DecoupleAction
-			{
-				actionGroup = None
-			}
 		}
 	}
 }

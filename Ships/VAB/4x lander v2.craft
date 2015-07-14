@@ -2,7 +2,7 @@ ship = 4x lander v2
 version = 1.0.2
 description = 
 type = VAB
-size = 13.13371,9.16843,13.7178
+size = 13.39117,9.16843,13.34775
 PART
 {
 	part = adapterSize2-Size1_4294638330
@@ -3330,7 +3330,7 @@ PART
 		isEnabled = True
 		status = Moving..
 		animSwitch = False
-		animTime = 0.44
+		animTime = 0.255
 		animSpeed = 1
 		EVENTS
 		{
@@ -3409,7 +3409,7 @@ PART
 		isEnabled = True
 		status = Moving..
 		animSwitch = False
-		animTime = 0.97
+		animTime = 0.785
 		animSpeed = 1
 		EVENTS
 		{

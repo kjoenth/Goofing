@@ -1,24 +1,17 @@
-ActiveTextureManagement (to reduce load times)
+ActiveTextureManagement
 BioMass
-Community Resource Pack (needed for Near Future Electrical)
-Chatterer (not necessary, but nice)
-Firespitter (used by Habitat Pack)
-Habitat Pack (inflatable hab)
-Heat Control (used for Near Future Electrical)
-Kas 
-Kerbaltek 
-Kethane (seems not necessary, actually)
+Chatterer
+Kas
+Kerbaltek
+Kethane
 Kis
-KSP-AVC 
+KSP-AVC
 MechJeb2
-Near Future Electrical (uses a small fission reactor)
-RemoteTech
-Squad (duh)
-ThunderAerospace (life support)
+RemoteTech(hyperedit)
+Squad
+ThunderAerospace
 TriggerTech
 ModuleManager
 HyperEdit
 https://kerbalstuff.com/mod/309/Kerbal%20Historical%20Institute%20presents%20Orginal%20KSP%20Parts
 AlternateResourcePanel
-Airbags_0.4.0 (for excess gas storage)
-

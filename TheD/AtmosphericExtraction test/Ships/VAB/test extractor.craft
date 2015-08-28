@@ -1,0 +1,2850 @@
+ship = test extractor
+version = 1.0.2
+description = 
+type = VAB
+size = 5.603055,11.56559,4.852417
+PART
+{
+	part = probeStackSmall_4294674664
+	partName = Part
+	pos = -0.005557913,19.39663,0.5546948
+	attPos = 0,0,0
+	attPos0 = -0.005557913,19.39663,0.5546948
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = ISRU_4294526920
+	link = BioMass.RedGasRegulator_4294483220
+	attN = bottom,ISRU_4294526920
+	attN = top,BioMass.RedGasRegulator_4294483220
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		standaloneToggle_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 15
+		maxAmount = 15
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = ISRU_4294526920
+	partName = Part
+	pos = -0.005557913,17.79663,0.5546948
+	attPos = 0,0,0
+	attPos0 = 0,-1.6,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = batteryBankLarge_4294653570
+	attN = top,probeStackSmall_4294674664
+	attN = bottom,batteryBankLarge_4294653570
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimationGroup
+		isEnabled = True
+		_isActive = False
+		isDeployed = True
+		EVENTS
+		{
+			DeployModule
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Deploy
+				guiName = Deploy Converter
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 3
+				externalToEVAOnly = True
+			}
+			RetractModule
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Retract
+				guiName = Retract Converter
+				category = Retract
+				guiActiveUnfocused = True
+				unfocusedRange = 3
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployModuleAction
+			{
+				actionGroup = None
+			}
+			RetractModuleAction
+			{
+				actionGroup = None
+			}
+			ToggleModuleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Sabatier rxn
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Sabatier rxn
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Electrolysis rxn
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Electrolysis rxn
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = batteryBankLarge_4294653570
+	partName = Part
+	pos = -0.005557913,16.18663,0.5546948
+	attPos = 0,0,0
+	attPos0 = 0,-1.610001,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = kethane.tank2mSmall_4294522450
+	link = H2ORadialLong_4294362662
+	attN = top,ISRU_4294526920
+	attN = bottom,kethane.tank2mSmall_4294522450
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 4000
+		maxAmount = 4000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = kethane.tank2mSmall_4294522450
+	partName = Part
+	pos = -0.005557913,15.71243,0.5546948
+	attPos = 0,0,0
+	attPos0 = 0,-0.4741993,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = landingLeg1-2_4294305274
+	link = landingLeg1-2_4294304680
+	link = landingLeg1-2_4294304594
+	attN = top,batteryBankLarge_4294653570
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = KethaneWetMassIndicator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Kethane
+		amount = 0
+		maxAmount = 2000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = H2ORadialLong_4294362662
+	partName = Part
+	pos = -0.8050982,16.26783,0.09307981
+	attPos = 0,0,0
+	attPos0 = -0.7995403,0.08119774,-0.461615
+	rot = 5.344022E-08,-0.5,-3.085373E-08,-0.8660254
+	attRot = 0,0,0,1
+	attRot0 = 5.344022E-08,-0.5,-3.085373E-08,-0.8660254
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,batteryBankLarge_4294653570
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = Water
+		amount = 0
+		maxAmount = 300
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294305274
+	partName = Part
+	pos = -1.221107,16.05163,1.256492
+	attPos = 0,0,0
+	attPos0 = -1.215549,0.3391962,0.7017974
+	rot = 0,-0.5,0,0.8660254
+	attRot = 0,0,0,1
+	attRot0 = 0,-0.5,0,0.8660254
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1-2_4294304680
+	sym = landingLeg1-2_4294304594
+	srfN = srfAttach,kethane.tank2mSmall_4294522450
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = True
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 3
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294304680
+	partName = Part
+	pos = 1.209991,16.05163,1.256492
+	attPos = 0,0,0
+	attPos0 = 1.215549,0.3391962,0.7017974
+	rot = 0,0.5000001,0,0.8660254
+	attRot = 0,0,0,1
+	attRot0 = 0,0.5000001,0,0.8660254
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1-2_4294305274
+	sym = landingLeg1-2_4294304594
+	srfN = srfAttach,kethane.tank2mSmall_4294522450
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = True
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 3
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294304594
+	partName = Part
+	pos = -0.005557956,16.05163,-0.8489001
+	attPos = 0,0,0
+	attPos0 = -4.33065E-08,0.3391962,-1.403595
+	rot = 0,1,0,-7.74287E-08
+	attRot = 0,0,0,1
+	attRot0 = 0,1,0,-7.74287E-08
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1-2_4294305274
+	sym = landingLeg1-2_4294304680
+	srfN = srfAttach,kethane.tank2mSmall_4294522450
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = True
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 3
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = BioMass.RedGasRegulator_4294483220
+	partName = Part
+	pos = 0.0004420872,19.86863,0.5186948
+	attPos = 0,0,0
+	attPos0 = 0.006,0.4720001,-0.03600001
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = RCSFuelTank_4294479480
+	attN = top,RCSFuelTank_4294479480
+	attN = bottom,probeStackSmall_4294674664
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Compression
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Compression
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Valve
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Valve
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = Hydrogen
+		amount = 0
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = RCSFuelTank_4294479480
+	partName = Part
+	pos = -0.005557895,20.57393,0.5486947
+	attPos = 0,0,0
+	attPos0 = -0.005999982,0.7053032,0.02999997
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = BioMass.GasBleedValve_4294425784
+	link = BioMass.GreenGasRegulator_4294504988
+	attN = top,BioMass.GreenGasRegulator_4294504988
+	attN = bottom,BioMass.RedGasRegulator_4294483220
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 250
+		maxAmount = 250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = BioMass.GasBleedValve_4294425784
+	partName = Part
+	pos = -0.580562,20.5789,0.2175727
+	attPos = 0,0,0
+	attPos0 = -0.5750042,0.004968643,-0.331122
+	rot = 2.314049E-08,0.2588205,-8.636094E-08,-0.9659255
+	attRot = 0,0,0,1
+	attRot0 = 2.314049E-08,0.2588205,-8.636094E-08,-0.9659255
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,RCSFuelTank_4294479480
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = H2 release
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop H2 release
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = CO2 release
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop CO2 release
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = O2 release
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop O2 release
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = KH4 release
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop KH4 release
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Water release
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Water release
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = BioMass.GreenGasRegulator_4294504988
+	partName = Part
+	pos = 0.0004421049,21.24923,0.5126947
+	attPos = 0,0,0
+	attPos0 = 0.006,0.6753025,-0.03600001
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = BioMass.Gas.Storage.01_4294498268
+	link = reactor-0625_4294635132
+	link = strutConnector_4294631380
+	link = strutConnector_4294631020
+	link = strutConnector_4294630954
+	link = strutConnector_4294630888
+	attN = top,reactor-0625_4294635132
+	attN = bottom,RCSFuelTank_4294479480
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Compression
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Compression
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Valve
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Valve
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = KethaneGas
+		amount = 0
+		maxAmount = 1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = BioMass.Gas.Storage.01_4294498268
+	partName = Part
+	pos = -0.3132232,21.68262,0.1990294
+	attPos = 0,0,0
+	attPos0 = -0.3136653,0.4333878,-0.3136653
+	rot = 0,0.7071066,-0.7071069,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0.7071066,-0.7071069,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 1
+	dstg = 1
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,BioMass.GreenGasRegulator_4294504988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = USI_ModuleBounce
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAirbag
+		isEnabled = True
+		isDeployed = False
+		EVENTS
+		{
+			InflateAirbags
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Inflate Airbags
+				guiName = Inflate Airbags
+				category = Inflate Airbags
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeflateAirbags
+			{
+				active = True
+				guiActive = False
+				guiIcon = Deflate Airbags
+				guiName = Deflate Airbags
+				category = Deflate Airbags
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InflateAction
+			{
+				actionGroup = None
+			}
+			DeflateAction
+			{
+				actionGroup = None
+			}
+			DisconnectAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = Oxygen
+		amount = 0
+		maxAmount = 1250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = CarbonDioxide
+		amount = 0
+		maxAmount = 1250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = KethaneGas
+		amount = 0
+		maxAmount = 1250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Hydrogen
+		amount = 0
+		maxAmount = 1250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ArgonGas
+		amount = 0
+		maxAmount = 1250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = reactor-0625_4294635132
+	partName = Part
+	pos = -0.005557895,22.17623,0.5546947
+	attPos = 0,0,0
+	attPos0 = -0.006,0.927,0.042
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = stackBiCoupler_4294241982
+	attN = top,stackBiCoupler_4294241982
+	attN = bottom,BioMass.GreenGasRegulator_4294504988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = FissionReactor
+		isEnabled = True
+		CurrentPowerPercent = 50
+		GeneratorSpinup = 0
+		CoreIntegrity = 100
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		CurrentPowerPercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			TryRepairReactor
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Reactor
+				guiName = Repair Reactor
+				category = Repair Reactor
+				guiActiveUnfocused = True
+				unfocusedRange = 3.5
+				externalToEVAOnly = True
+			}
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = RadioactiveStorageContainer
+		isEnabled = True
+		EVENTS
+		{
+			TransferWaste
+			{
+				active = True
+				guiActive = True
+				guiIcon = Transfer Waste
+				guiName = Transfer Waste
+				category = Transfer Waste
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TransferFuel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Transfer Fuel
+				guiName = Transfer Fuel
+				category = Transfer Fuel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 50
+		maxAmount = 50
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = DepletedFuel
+		amount = 0
+		maxAmount = 20
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = EnrichedUranium
+		amount = 20
+		maxAmount = 20
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackBiCoupler_4294241982
+	partName = Part
+	pos = -0.005557895,23.0658,0.5546947
+	attPos = 0,0,0
+	attPos0 = 0,0.8895664,0
+	rot = 1,0,0,0
+	attRot = 0.9999999,0,0,0
+	attRot0 = 1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = BioMass.CryogenicAtmosphericSeperator-L_4294624918
+	link = BioMass.CryogenicAtmosphericSeperator-L_4294241644
+	attN = top,reactor-0625_4294635132
+	attN = bottom1,BioMass.CryogenicAtmosphericSeperator-L_4294624918
+	attN = bottom2,BioMass.CryogenicAtmosphericSeperator-L_4294241644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = BioMass.CryogenicAtmosphericSeperator-L_4294624918
+	partName = Part
+	pos = 0.6452043,23.83397,0.5546947
+	attPos = 0,0,0
+	attPos0 = 0.6507622,-0.7681675,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = -1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = BioMass.CircularIntake1_4294576914
+	attN = top,BioMass.CircularIntake1_4294576914
+	attN = bottom,stackBiCoupler_4294241982
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Nitrogen Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Nitrogen Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Oxygen Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Oxygen Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open CO2 Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close CO2 Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Argon Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Argon Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Kethane Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Kethane Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Water Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Water Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = BioMass.CircularIntake1_4294576914
+	partName = Part
+	pos = 0.6452043,24.93397,0.5546947
+	attPos = 0,0,0
+	attPos0 = 0,1.1,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = bottom01,BioMass.CryogenicAtmosphericSeperator-L_4294624918
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceIntake
+		isEnabled = True
+		intakeEnabled = True
+		EVENTS
+		{
+			Deactivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Close Intake
+				guiName = Close Intake
+				category = Close Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Open Intake
+				guiName = Open Intake
+				category = Open Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = IntakeAtm
+		amount = 0.85
+		maxAmount = 0.85
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = BioMass.CryogenicAtmosphericSeperator-L_4294241644
+	partName = Part
+	pos = -0.6563201,23.83397,0.5546947
+	attPos = 0,0,0
+	attPos0 = -0.6507622,-0.7681675,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = -1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = BioMass.CircularIntake1_4294241526
+	attN = top,BioMass.CircularIntake1_4294241526
+	attN = bottom,stackBiCoupler_4294241982
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Nitrogen Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Nitrogen Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Oxygen Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Oxygen Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open CO2 Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close CO2 Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Argon Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Argon Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Kethane Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Kethane Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Open Water Filter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Close Water Filter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = BioMass.CircularIntake1_4294241526
+	partName = Part
+	pos = -0.6563201,24.93397,0.5546947
+	attPos = 0,0,0
+	attPos0 = 0,1.1,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = bottom01,BioMass.CryogenicAtmosphericSeperator-L_4294241644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceIntake
+		isEnabled = True
+		intakeEnabled = True
+		EVENTS
+		{
+			Deactivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Close Intake
+				guiName = Close Intake
+				category = Close Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Open Intake
+				guiName = Open Intake
+				category = Open Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = IntakeAtm
+		amount = 0.85
+		maxAmount = 0.85
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4294631380
+	partName = CompoundPart
+	pos = -0.1449004,21.58981,-0.02973139
+	attPos = 0,0,0
+	attPos0 = -0.1453425,0.3405838,-0.5424261
+	rot = 1.083309E-07,0.6087615,-1.411795E-07,-0.7933533
+	attRot = 0,0,0,1
+	attRot0 = 1.083309E-07,0.6087615,-1.411795E-07,-0.7933533
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294631020
+	sym = strutConnector_4294630954
+	sym = strutConnector_4294630888
+	srfN = srfAttach,BioMass.GreenGasRegulator_4294504988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294241982
+		pos = -0.06153177,1.367508,-0.002328549
+		rot = 0,0.2216358,0.9028443,-0.3684426
+		dir = -0.04494992,0.9989878,-0.001701011
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294631020
+	partName = CompoundPart
+	pos = -0.541984,21.58981,0.6580372
+	attPos = 0,0,0
+	attPos0 = -0.5424261,0.3405838,0.1453425
+	rot = -2.322751E-08,-0.1305261,-1.764305E-07,-0.9914449
+	attRot = 0,0,0,1
+	attRot0 = -2.322751E-08,-0.1305261,-1.764305E-07,-0.9914449
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294631380
+	sym = strutConnector_4294630954
+	sym = strutConnector_4294630888
+	srfN = srfAttach,BioMass.GreenGasRegulator_4294504988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294241982
+		pos = -0.0581784,1.292982,-0.002201576
+		rot = 0,2.985542E-08,-0.7071069,0.7071066
+		dir = -0.04494992,0.9989878,-0.001701011
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294630954
+	partName = CompoundPart
+	pos = 0.1457847,21.58981,1.055121
+	attPos = 0,0,0
+	attPos0 = 0.1453426,0.3405838,0.5424261
+	rot = -1.411795E-07,-0.7933533,-1.083308E-07,-0.6087615
+	attRot = 0,0,0,1
+	attRot0 = -1.411795E-07,-0.7933533,-1.083308E-07,-0.6087615
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294631380
+	sym = strutConnector_4294631020
+	sym = strutConnector_4294630888
+	srfN = srfAttach,BioMass.GreenGasRegulator_4294504988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294241982
+		pos = -0.05812574,1.291815,-0.002199582
+		rot = 0,0.001100977,-0.7069585,0.7072542
+		dir = -0.04494992,0.9989878,-0.001701011
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294630888
+	partName = CompoundPart
+	pos = 0.5428681,21.58981,0.3673521
+	attPos = 0,0,0
+	attPos0 = 0.542426,0.3405838,-0.1453426
+	rot = -1.764305E-07,-0.9914449,2.322751E-08,0.1305261
+	attRot = 0,0,0,1
+	attRot0 = -1.764305E-07,-0.9914449,2.322751E-08,0.1305261
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294631380
+	sym = strutConnector_4294631020
+	sym = strutConnector_4294630954
+	srfN = srfAttach,BioMass.GreenGasRegulator_4294504988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294241982
+		pos = -0.05846826,1.299425,-0.002212538
+		rot = 0,0.01341781,-0.8623037,0.5062137
+		dir = -0.04494992,0.9989878,-0.001701011
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}

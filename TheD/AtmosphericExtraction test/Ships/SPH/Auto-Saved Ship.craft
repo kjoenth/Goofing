@@ -1,0 +1,518 @@
+ship = Untitled Space Craft
+version = 1.0.2
+description = 
+type = SPH
+size = 1.334,1.873718,1.359174
+PART
+{
+	part = probeStackSmall_4294668776
+	partName = Part
+	pos = -1.412952,7.362218,0.01774188
+	attPos = 0,0,0
+	attPos0 = -1.412952,7.362218,0.01774188
+	rot = 1,0,0,0
+	attRot = 0.7071068,0,0,0.7071068
+	attRot0 = 0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = BioMass.CryogenicAtmosphericSeperator-L_4294655948
+	attN = bottom,BioMass.CryogenicAtmosphericSeperator-L_4294655948
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		standaloneToggle_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 15
+		maxAmount = 15
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = BioMass.CryogenicAtmosphericSeperator-L_4294655948
+	partName = Part
+	pos = -1.412952,7.962218,0.01774188
+	attPos = 0,0,0
+	attPos0 = 0,-0.5999999,0
+	rot = 0,0,0,-1
+	attRot = 0.7071067,0,0,-0.7071067
+	attRot0 = 1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = bottom,probeStackSmall_4294668776
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Converter
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Converter
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		HeatThrottle = 1
+		HeatThrottleSpeed = 0.05
+		avgHeatThrottle = 1
+		DirtyFlag = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		lastUpdateTime = 0
+		EVENTS
+		{
+			StartResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Start Converter
+				guiName = Start Compression
+				category = Start Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopResourceConverter
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Converter
+				guiName = Stop Compression
+				category = Stop Converter
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}

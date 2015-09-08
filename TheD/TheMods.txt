@@ -1,17 +1,62 @@
-ActiveTextureManagement
-BioMass
-Chatterer
-Kas
-Kerbaltek
-Kethane
-Kis
-KSP-AVC
-MechJeb2
-RemoteTech(hyperedit)
-Squad
-ThunderAerospace
-TriggerTech
-ModuleManager
-HyperEdit
-https://kerbalstuff.com/mod/309/Kerbal%20Historical%20Institute%20presents%20Orginal%20KSP%20Parts
-AlternateResourcePanel
+System:
+	ActiveTextureManagement
+	ModuleManager
+	KSP-AVC
+Audio and Visual:
+	EnvironmentalVisualEnhancements 
+	AlternateResourcePanel
+	Chatterer
+
+OTHER:
+	HyperEdit
+
+PARTS:
+	Near Future Propulsion
+	Near Future ELlectrical
+	Hex Truss System
+
+Mechanics:
+	TAC-Fuel Balancer
+
+Parts and mechanics:
+	Kas
+	BioMass
+	Kethane
+	MechJeb2
+	TAC-Life Support
+	Infernal Robotics
+	Astroid Day
+
+
+
+
+
+
+
+curl -L https://github.com/rbray89/EnvironmentalVisualEnhancements/releases/download/7-4/EnvironmentalVisualEnhancements-7-4-LR.zip -o VisualENhance.zip
+curl -L https://github.com/rbray89/ActiveTextureManagement/releases/download/5-0/Aggressive-Release.zip -o ActiveTextMan.zip
+curl -L https://github.com/TriggerAu/AlternateResourcePanel/releases/download/v2.7.3.0/KSPAlternateResourcePanel_2.7.3.0.zip -o AltResource.zip
+curl -L https://github.com/taraniselsu/TacFuelBalancer/releases/download/v2.5.1/TacFuelBalancer_2.5.1.7.zip -o FuelBalance.zip
+curl -L https://github.com/taraniselsu/TacLifeSupport/releases/download/v0.11.1.20/TacLifeSupport_0.11.1.20.zip -o LifeSupport.zip
+
+curl -L https://github.com/neuoy/KSPTrajectories/releases/download/v1.4.3/Trajectories-v1.4.3.zip -o Trajectories.zip
+
+curl -L https://ksp.sarbian.com/jenkins/job/ModuleManager/95/artifact/ModuleManager-2.6.8.zip -o MM.zip
+curl -L http://taniwha.org/~bill/Kethane-0.9.3.zip -o Kethane.zip
+
+
+curl -L https://kerbalstuff.com/mod/959/Asteroid%20Day/download/1.0 -o AstroidDay.zip
+curl -L https://ksp.sarbian.com/jenkins/job/MechJeb2-Dev/lastSuccessfulBuild/artifact/MechJeb2-2.5.4.0-512.zip -o Mechjeb.zip
+
+curl -L http://kerbal.curseforge.com/ksp-mods/223900-kerbal-attachment-system-kas/files/latest -o KAS.zip
+curl -L http://kerbal.curseforge.com/ksp-mods/220462-ksp-avc-add-on-version-checker/files/latest -o KSPAVC.zip
+curl -L https://kerbalstuff.com/mod/347/Near%20Future%20Propulsion/download/0.5.3 -o NearPropulsion.zip
+curl -L https://kerbalstuff.com/mod/349/Near%20Future%20Electrical/download/0.5.3 -o NearElectrical.zip
+curl -L https://kerbalstuff.com/mod/164/Hex%20Truss/download/0.3.1 -o HexTruss.zip
+curl -L https://beta.kerbalstuff.com/mod/124/Chatterer/download/0.9.6 -o Chatterer.zip
+curl -L https://kerbalstuff.com/mod/677/Infernal%20Robotics%20Model%20Rework%20-%20Utility%20Pack/download/v01a -o InfernalRobotics.zip
+curl -L https://kerbalstuff.com/mod/450/Hullcam%20VDS/download/0.50 -o Hullcam.zip
+
+http://www.filedropper.com/rollingduststormsonduna
+
+http://www.kerbaltek.com/_downloads/hyperedit/HyperEdit-1.4.1_for-KSP-1.0.zip

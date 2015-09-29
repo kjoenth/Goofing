@@ -1,0 +1,10 @@
+Ship Descriptions:
+
+Manned Booster Planes:
+	Somewhat like a space shuttle, these craft are meant to act as side mounted boosters that can be landed on a runway after separation for refueling and reuse. Their landing can be automated, but...Kerbals.
+
+Sample return with shroud:
+	An ISRU testbed that is meant to land on Duna, gather a soil sample, and return it to orbit. It is a test bed of the technology to convert CO2 in the Duna atmosphere into Kethane, and to recover and store oxidizer.
+
+Duna Refueler:
+	The ISRU refueler and launch vehicle meant to allow up to six kerbals to return to orbit from Duna's surface.

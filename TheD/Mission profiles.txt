@@ -1,0 +1,37 @@
+Mission 1: Kerbin Communication Network
+	"4x ComSat Assembly"
+		4x ComSats with cameras. 
+		4x docking ports
+		RCS thrusters
+		Large docking port-this should probably be removed for mission 1
+		Fairings
+
+	
+	Target orbits: 350km, spaced about 1343.503km apart
+
+	1x Sat launch holder launcher (includes fairing shell), docking port, and some RCS thrusters
+	2x Booster planes
+	2-stage lifter
+	Target orbit: 350km
+
+Mission 2: Assemble Ion Powered Duna Transit Vechicle
+	Launch: 2x Arm truses
+	Launch: 4x engine assemblies
+	Launch: 1x Fuel Core
+	Assemble at ~500km to 1000km
+	?Boost up to 1000 to 8000km?
+
+Mission 3: Launch communications sat 4 pack and dock to Transit Vechicle. Maybe also refuel? 
+
+Mission 4: Go to Duna and place communications in orbit there. Return to Kerbin
+
+Mission 5: Launch Regolith return mission #1 and dock to transit vechicle
+
+Mission 6: Go to Duna and release sample return
+
+Mission 7: Return to Kerbin
+
+Mission 8: Launch 1x Regolith and some polar sats for Duna
+
+Mission 9: Go to Duna and deploy polar sat, regolith, return transit
+
